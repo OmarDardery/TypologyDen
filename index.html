@@ -31,27 +31,39 @@
             .menubutton{
                 transition: transform 0.5s;
                 z-index: 5;
+                position: fixed;
+                top: 27px;
+                left: 20px;
             }
             .rotated{
                 transform: rotate(90deg);
             }
             .hidden{
                 display: none;
+                
             }
+            
             .menu{
                 height: 100%;
-                width: 40%;
+                width: 60%;
                 background-color: #173b45;
                 position: fixed;
                 top: 0;
                 z-index: 2;
+                transition: transform 0.5s ease-in-out;
+            }
+            .transitionEnd{
+                transition: translateX(-50%);
             }
         </style>
     </head>
     <body>
+        <div class="nav">
+            <button class="menubutton" style="border-radius: 50%; font-size: 30px; padding: 5px; width: 50px; background-color: #ff204e; color: rgb(0, 0, 0); z-index: 3;">☰</button>
+        </div>
         <div class="title">
             <div class="nav">
-                <button class="menubutton" style="border-radius: 50%; font-size: 30px; padding: 5px; width: 50px; background-color: #ff204e; color: rgb(0, 0, 0); z-index: 3;">☰</button>
+                <button class="menubutto" style="border-radius: 50%; font-size: 30px; padding: 5px; width: 50px; background-color: #ff204e; color: rgb(0, 0, 0); z-index: 3;">☰</button>
             </div>
             <div style="display: flex; flex-direction: column; gap: 0px; width: 100%;">
                 <h1 class="name" style="color: #f8eded;">TypologyDen</h1>
