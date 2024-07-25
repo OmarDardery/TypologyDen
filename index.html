@@ -90,21 +90,64 @@
             }
 
             .body-container{
-                position: fixed;
+                position: absolute;
                 left: 0;
                 height: 100%;
                 width: 100%;
-                background-color: rgb(166, 255, 0);
                 display: flex;
-                gap: 10%;
+                gap: 1%;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+                z-index: -1;
             }
             .test-container{
                 height: 20%;
                 width: 80%;
                 background-color: aliceblue;
+                border-radius: 20px;
+                background-color: #a0153e;
+                position: relative;
+            }
+            .bottomPart{
+                height: 700px;
+            }
+            
+            .mbti-shadow{
+                background-color: aliceblue;
+                height: 20%;
+                width: 80%;
+                border-radius: 20px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                right: 10px;
+                top: 10px;
+                z-index: -2;
+            }
+            .enneagram-shadow{
+                background-color: aliceblue;
+                height: 20%;
+                width: 80%;
+                border-radius: 20px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                right: 10px;
+                top: 10px;
+                z-index: -2;
+            }
+            .big5-shadow{
+                background-color: aliceblue;
+                height: 20%;
+                width: 80%;
+                border-radius: 20px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                right: 10px;
+                top: 10px;
+                z-index: -2;
             }
         </style>
     </head>
@@ -136,14 +179,26 @@
 
         <div class="body-container">
             <div class="mbti test-container">
+                <div class="mbti-shadow">
 
+                </div>
             </div>
+            
             <div class="enneagram test-container">
+                <div class="enneagram-shadow">
 
+                </div>
             </div>
+            
             <div class="big5 test-container">
+                <div class="big5-shadow">
 
+                </div>
             </div>
+            
+        </div>
+        <div class="bottomPart" style="width: 100%;  bottom: 0;">
+
         </div>
         <script src="./java.js"></script>
     </body>
