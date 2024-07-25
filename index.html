@@ -38,11 +38,16 @@
             .rotated{
                 transform: rotate(90deg);
             }
-            .hidden{
-                display: none;
+            .hidden-menu{
+                transform: translateX(-110%);
                 
             }
-            
+            .fade{
+                transform: fade;
+            }
+            .opaque{
+                opacity: 0.4;
+            }
             .menu{
                 height: 100%;
                 width: 60%;
@@ -52,8 +57,19 @@
                 z-index: 2;
                 transition: transform 0.5s ease-in-out;
             }
-            .transitionEnd{
-                transition: translateX(-50%);
+            .opacity{
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                position: fixed;
+                z-index: 1;
+                opacity: 0.5;
+                transition: opacity 0.5s ease-in-out;
+            }
+            .hidden{
+                opacity: 0;
             }
         </style>
     </head>
@@ -63,7 +79,7 @@
         </div>
         <div class="title">
             <div class="nav">
-                <button class="menubutto" style="border-radius: 50%; font-size: 30px; padding: 5px; width: 50px; background-color: #ff204e; color: rgb(0, 0, 0); z-index: 3;">☰</button>
+                <button class="npaque" style="border-radius: 50%; font-size: 30px; padding: 5px; width: 50px; background-color: #ff204e; color: rgb(0, 0, 0); z-index: 3;">☰</button>
             </div>
             <div style="display: flex; flex-direction: column; gap: 0px; width: 100%;">
                 <h1 class="name" style="color: #f8eded;">TypologyDen</h1>
@@ -73,7 +89,10 @@
         <div style="width: 100%; background-color: blueviolet; top: 0; height: 140px;">
 
         </div>
-        <div class="menu hidden">
+        <div class="opacity hidden">
+
+        </div>
+        <div class="menu npaque hidden-menu">
             
         </div>
         <script src="./java.js"></script>
