@@ -16,6 +16,7 @@
                 position: fixed;
                 border-bottom: 3px solid black;
                 background-color: #5d0e41;
+                z-index: 2;
             }
             *{
                 word-spacing: 5px;
@@ -32,7 +33,7 @@
             }
             .menubutton{
                 transition: transform 0.5s;
-                z-index: 5;
+                z-index: 3;
                 position: fixed;
                 top: 28px;
                 left: 11px;
@@ -43,9 +44,6 @@
             .hidden-menu{
                 transform: translateX(-110%);
                 
-            }
-            .fade{
-                transform: fade;
             }
             .opaque{
                 opacity: 0.4;
@@ -72,7 +70,7 @@
                 transition: opacity 0.5s ease-in-out;
             }
             .hidden{
-                opacity: 0;
+                display: none;
             }
             .topPart{
                 height: 110px;
@@ -99,7 +97,7 @@
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-                z-index: -1;
+                z-index: 0;
             }
             .test-container{
                 height: 20%;
@@ -114,7 +112,7 @@
                 font-size: 130%;
                 color: #f8eded;
                 padding: 10px;
-                transition: background-color 0.3s ease, transform 0.3s ease;
+                
                 
             }
             .bottomPart{
@@ -131,7 +129,7 @@
                 width: 100%;
                 right: 10px;
                 top: 10px;
-                z-index: -2;
+                z-index: -100000;
             }
             .enneagram-shadow{
                 background-color: black;
@@ -143,7 +141,7 @@
                 width: 100%;
                 right: 10px;
                 top: 10px;
-                z-index: -2;
+                z-index: -10000;
             }
             .big5-shadow{
                 background-color: black;
@@ -155,12 +153,11 @@
                 width: 100%;
                 right: 10px;
                 top: 10px;
-                z-index: -2;
+                z-index: -1000;
             }
-            .test-container:hover {
-                background-color: #f8eded; /* Change background color on hover */
-                opacity: 0.3; /* Change opacity on hover */
-                transform: scale(1.05); /* Slightly scale the element on hover */
+            .test-container:hover {/* Change background color on hover */
+                transform: translateY(-10%);
+                transform: translateZ(2); /* Slightly scale the element on hover */
             }
         </style>
     </head>

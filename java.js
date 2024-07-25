@@ -5,3 +5,8 @@ menuButton.addEventListener("click", function(){
     menu.classList.toggle("hidden-menu");
     document.querySelector(".opacity").classList.toggle("hidden");
 });
+
+var MBTIContainer = document.querySelector(".mbti");
+MBTIContainer.addEventListener("click", function(){
+    window.location.href = "www.google.com";
+});
