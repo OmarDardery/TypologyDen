@@ -8,5 +8,5 @@ menuButton.addEventListener("click", function(){
 
 var MBTIContainer = document.querySelector(".mbti");
 MBTIContainer.addEventListener("click", function(){
-    window.location.href = "www.google.com";
+    window.location.href = "https://www.google.com";
 });
