@@ -4,135 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Typology Den</title>
-        <style>
-            .title{
-                display: flex;
-                align-items: center;
-                top: 0px;
-                left: 0;
-                padding: 10px;
-                gap: 20px;
-                width: 100%;
-                position: fixed;
-                border-bottom: 3px solid black;
-                background-color: #5d0e41;
-                z-index: 2;
-            }
-            *{
-                word-spacing: 5px;
-            }
-            .name{
-                align-self: center;
-                margin: 0;
-                margin-right: 68px;
-            }
-            .cred{
-                align-self: flex-end;
-                margin-right: 10px;
-                right: 1;
-            }
-            .menubutton{
-                transition: transform 0.5s;
-                z-index: 5;
-                position: fixed;
-                top: 28px;
-                left: 11px;
-                cursor: pointer;
-            }
-            .rotated{
-                transform: rotate(90deg);
-            }
-            .hidden-menu{
-                transform: translateX(-110%);
-                
-            }
-            .opaque{
-                opacity: 0.4;
-            }
-            .menu{
-                left: 0;
-                height: 100%;
-                width: fit-content;
-                background-color: #173b45;
-                position: fixed;
-                top: 0;
-                z-index: 2;
-                transition: transform 0.3s ease-in-out;
-                padding: 10px;
-            }
-            .opacity{
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                background-color: black;
-                position: fixed;
-                z-index: 2;
-                opacity: 0;
-                transition: opacity 0.3s ease-in-out;
-                cursor: pointer;
-            }
-            .hidden{
-                display: none;
-            }
-            .opacityy{
-                opacity: 0.5;
-            }
-            .topPart{
-                height: 110px;
-            }
-            @media (max-width: 501px) {
-                .menubutton{
-                    top: 38px;
-                }
-                .topPart{
-                    height: 131px;
-                }
-            }
-            body{
-                background-color: #00224d;
-            }
-
-            #body-container{
-                position: absolute;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                gap: 1%;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                z-index: 0;
-            }
-            .test-container{
-                height: 20%;
-                width: 70%;
-                background-color: aliceblue;
-                border-radius: 20px;
-                background-color: #a0153e;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 110%;
-                color: #f8eded;
-                padding: 10px;
-                box-shadow: -10px 10px rgb(0, 0, 0) ;
-                cursor: pointer;
-                text-align: center;
-            }
-            .bottomPart{
-                height: 600px;
-            }
-            
-            .test-container:hover {/* Change background color on hover */
-                background-color: gray;
-                transform: translateY(-10%);
-                transform: translateZ(2); /* Slightly scale the element on hover */
-                color: #003172;
-            }
-        </style>
+        <link rel="stylesheet" href="./styles.css">
     </head>
     <body>
         <div class="nav">
@@ -188,7 +60,8 @@
         <div class="bottomPart" style="width: 100%;  bottom: 0;">
 
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="./java.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./index.js"></script>
     </body>
 </html>
