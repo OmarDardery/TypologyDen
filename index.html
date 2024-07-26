@@ -37,6 +37,7 @@
                 position: fixed;
                 top: 28px;
                 left: 11px;
+                cursor: pointer;
             }
             .rotated{
                 transform: rotate(90deg);
@@ -51,12 +52,13 @@
             .menu{
                 left: 0;
                 height: 100%;
-                width: 60%;
+                width: fit-content;
                 background-color: #173b45;
                 position: fixed;
                 top: 0;
                 z-index: 2;
                 transition: transform 0.5s ease-in-out;
+                padding: 10px;
             }
             .opacity{
                 top: 0;
@@ -68,6 +70,7 @@
                 z-index: 2;
                 opacity: 0;
                 transition: opacity 0.5s ease-in-out;
+                cursor: pointer;
             }
             .hidden{
                 display: none;
@@ -156,7 +159,11 @@
         </div>
         
         <div class="menu npaque hidden-menu">
-            
+            <div style="top: 0; margin-left: 70px; color: aliceblue; margin-right: 20px">
+                <h2>Typology Den:</h2>
+                <h3 style="margin-top: 0px;">Where you go to get typed</h3>
+            </div>
+            <hr style="width: 100%;"/>
         </div>
 
 
