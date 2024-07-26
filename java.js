@@ -15,12 +15,22 @@ menuButton.addEventListener("click", function(){
             }, { once: true });
             menuButton.classList.toggle("rotated");
             menu.classList.toggle("hidden-menu");
+
         }, { once: true });
     }else{
         
         document.querySelector(".opacity").classList.remove("opacityy");
         document.querySelector(".opacity").addEventListener("transitionend", function(){
             document.querySelector(".opacity").classList.add("hidden");
+        }, { once: true });
+        document.querySelector(".opacity").addEventListener("click", function(){
+            document.querySelector(".opacity").classList.remove("opacityy");
+            document.querySelector(".opacity").addEventListener("transitionend", function(){
+                document.querySelector(".opacity").classList.add("hidden");
+            }, { once: true });
+            menuButton.classList.toggle("rotated");
+            menu.classList.toggle("hidden-menu");
+            
         }, { once: true });
         
     }
