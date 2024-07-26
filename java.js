@@ -8,7 +8,14 @@ menuButton.addEventListener("click", function(){
         void document.querySelector(".opacity").offsetWidth;
 
         document.querySelector(".opacity").classList.add("opacityy");
-
+        document.querySelector(".opacity").addEventListener("click", function(){
+            document.querySelector(".opacity").classList.remove("opacityy");
+            document.querySelector(".opacity").addEventListener("transitionend", function(){
+                document.querySelector(".opacity").classList.add("hidden");
+            }, { once: true });
+            menuButton.classList.toggle("rotated");
+            menu.classList.toggle("hidden-menu");
+        }, { once: true });
     }else{
         
         document.querySelector(".opacity").classList.remove("opacityy");
