@@ -164,7 +164,7 @@ body{
     align-items: center;
 }
 .question-container{
-    background-color: #71102d;
+    background-color: #8b2a47;
     width: 60%;
     max-width: 400px;
     text-align: center;
@@ -346,4 +346,3 @@ body{
 .eightthF{
     grid-area: 7 / 5 / 8 / 7;
 }
-
