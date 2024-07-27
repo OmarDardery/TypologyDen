@@ -286,7 +286,7 @@ function createQuestionsMbti(object, label) {
 
     for (var i = 0; i < object.questions.length; i++) {
         var questionmbti = $("<div></div>"); // Create a new div for the question container
-        questionmbti.addClass("question-container"); // Add class using jQuery addClass method
+        questionmbti.addClass("question-container hidden"); // Add class using jQuery addClass method
         questionmbti.addClass(label); // Add additional class
         page.append(questionmbti); // Append the question container to the page
 
@@ -300,3 +300,10 @@ function createQuestionsMbti(object, label) {
 
 
 createQuestionsMbti(fe, "fe");
+createQuestionsMbti(se, "se");
+createQuestionsMbti(te, "te");
+createQuestionsMbti(ne, "ne");
+createQuestionsMbti(fi, "fi");
+createQuestionsMbti(ti, "ti");
+createQuestionsMbti(ni, "ni");
+createQuestionsMbti(si, "si");
