@@ -2,6 +2,8 @@ var menuButton = $(".menubutton");
 var menu = $(".menu");
 var opacity = $(".opacity");
 
+$(".last-page").hide();
+
 menuButton.on("click", function() {
     menuButton.toggleClass("rotated");
     menu.toggleClass("hidden-menu");
@@ -317,4 +319,5 @@ for(var i = 0; i < 8; i++){
     createQuestionsMbti(mbtiObjects[l[i]]);
 }
 $(".page").hide();
-$("#page1").show()
+$("#page1").show();
+
