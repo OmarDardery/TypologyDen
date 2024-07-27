@@ -29,7 +29,7 @@
     transition: transform 0.5s;
     z-index: 5;
     position: fixed;
-    top: 28px;
+    top: 29px;
     left: 11px;
     cursor: pointer;
 }
@@ -73,9 +73,25 @@
 .topPart{
     height: 110px;
 }
-@media (max-width: 501px) {
+@media (max-width: 555px) {
     .menubutton{
         top: 38px;
+    }
+    .topPart{
+        height: 131px;
+    }
+}
+@media (max-width: 350px) {
+    .menubutton{
+        top: 55px;
+    }
+    .topPart{
+        height: 131px;
+    }
+}
+@media (max-width: 336px) {
+    .menubutton{
+        top: 65px;
     }
     .topPart{
         height: 131px;
@@ -201,4 +217,7 @@ input[type="range"]::-moz-range-thumb {
 }
 input[type="range"]:hover {
     opacity: 1;
+}
+*{
+    font-family: sans-serif;
 }
