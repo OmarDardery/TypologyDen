@@ -235,34 +235,42 @@ const neurotic = {
 const ni = {
     questions: Niq,
     score: 0,
+    label: "Ni"
 };
 const ne = {
     questions: Neq,
-    score: 0
+    score: 0,
+    label: "Ne"
 };
 const si = {
     questions: Siq,
-    score: 0
+    score: 0,
+    label: "Si"
 };
 const ti = {
     questions: Tiq,
-    score: 0
+    score: 0,
+    label: "Ti"
 };
 const fi = {
     questions: Fiq,
-    score: 0
+    score: 0,
+    label: "Fi"
 };
 const te = {
     questions: Teq,
-    score: 0
+    score: 0,
+    label: "Te"
 };
 const se = {
     questions: Seq,
-    score: 0
+    score: 0,
+    label: "Se"
 };
 const fe = {
     questions: Feq,
-    score: 0
+    score: 0,
+    label: "Fe"
 };
 
 var pageNumMbti = 1;
@@ -278,32 +286,35 @@ function randNumsArray(arraylennum){
     return ranNumArray;
 }
 
-function createQuestionsMbti(object, label) {
+function createQuestionsMbti(object) {
     var page = $("<div></div>"); // Create a new div element
     page.attr("id", "page" + pageNumMbti); // Set the ID using jQuery attr method
     $("#mbtiTest .pages").append(page); // Append the new page to the container
     pageNumMbti++;
-
+    page.addClass("page");
+    var rand = randNumsArray(object.questions.length);
     for (var i = 0; i < object.questions.length; i++) {
         var questionmbti = $("<div></div>"); // Create a new div for the question container
-        questionmbti.addClass("question-container hidden"); // Add class using jQuery addClass method
-        questionmbti.addClass(label); // Add additional class
+        questionmbti.addClass("question-container"); // Add class using jQuery addClass method
+        questionmbti.addClass(object.label + "page"); // Add additional class
         page.append(questionmbti); // Append the question container to the page
 
-        var question = $("<h3></h3>"); // Create a new h3 element
-        var rand = randNumsArray(object.questions.length); // Get an array of random indices
+        var question = $("<h4></h4>"); // Create a new h3 element
+         // Get an array of random indices
         question.text(object.questions[rand[i]]); // Set the text of the question using jQuery text method
-
+        question.addClass("question");
         questionmbti.append(question); // Append the question to the question container
+        var inputDiv = $(`<div class = 'inputDiv'><h5 style='font-size: 15px'>Not At All Relatable</h5><input class = ${object.label} type = 'range' min = '0' max = '100' value='50'><h5 style='fontsize: 15px'>Very Relatable</h5></div>`);
+        questionmbti.append(inputDiv);
     }
 }
 
 
-createQuestionsMbti(fe, "fe");
-createQuestionsMbti(se, "se");
-createQuestionsMbti(te, "te");
-createQuestionsMbti(ne, "ne");
-createQuestionsMbti(fi, "fi");
-createQuestionsMbti(ti, "ti");
-createQuestionsMbti(ni, "ni");
-createQuestionsMbti(si, "si");
+var mbtiObjects = [ne, ni, se, si, fe, fi, te, ti];
+
+var l = randNumsArray(8);
+for(var i = 0; i < 8; i++){
+    createQuestionsMbti(mbtiObjects[l[i]]);
+}
+$(".page").hide();
+$("#page1").show()
