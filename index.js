@@ -324,3 +324,441 @@ var pageNumberMbti = 1;
 $("#mbtiTest .numbers").text(pageNumberMbti + "/8");
 
 $(".submit").hide();
+
+$(".next").on("click", function(){
+    if(pageNumberMbti == 8){
+        $(".end").removeClass("hidden-warning");
+        $(".closewarning").one("click", function(){
+            $(".end").addClass("hidden-warning");
+        });
+    }else{
+        pageNumberMbti++;
+        $(".page").hide();
+        $("#page" +pageNumberMbti).show();
+        if(pageNumberMbti == 8){
+            $(".submit").show();
+        }
+    }
+    $("#mbtiTest .numbers").text(pageNumberMbti + "/8");
+});
+
+$(".previous").on("click", function(){
+    if(pageNumberMbti == 1){
+        $(".start").removeClass("hidden-warning");
+        $(".closewarning").one("click", function(){
+            $(".start").addClass("hidden-warning");
+        });
+    }else{
+        pageNumberMbti--;
+        $(".page").hide();
+        $("#page" +pageNumberMbti).show();
+    }
+    $("#mbtiTest .numbers").text(pageNumberMbti + "/8");
+});
+
+
+
+function calculateScore(groupclass){
+    var sliders = document.querySelectorAll("." + groupclass);
+    var total = 0;
+    sliders.forEach(slider => {
+        total += parseInt(slider.value);
+    })
+    return total;
+}
+function sort(array, arrayNa) {
+    var unsorted = true;
+    while (unsorted) {
+        unsorted = false;
+        for (var i = 0; i < array.length - 1; i++) {
+            if (array[i] < array[i + 1]) {
+                // Swap scores
+                var tempScore = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = tempScore;
+
+                // Swap corresponding function names
+                var tempName = arrayNa[i];
+                arrayNa[i] = arrayNa[i + 1];
+                arrayNa[i + 1] = tempName;
+
+                unsorted = true;
+            }
+        }
+    }
+}
+
+$("#mbtiTest .submit").on("click", function(){
+    se.score = calculateScore(se.label);
+    si.score = calculateScore(si.label);
+    ne.score = calculateScore(ne.label);
+    ni.score = calculateScore(ni.label);
+    fe.score = calculateScore(fe.label);
+    fi.score = calculateScore(fi.label);
+    te.score = calculateScore(te.label);
+    ti.score = calculateScore(ti.label);
+    var totalScoresArray = [ni.score, ne.score, si.score, se.score, te.score, ti.score, fe.score, fi.score];
+    arrayN = ["ni", "ne", "si", "se", "te", "ti", "fe", "fi"];
+    sort(totalScoresArray, arrayN);
+    var domF1 = arrayN[0];
+    var auxf1;
+    var mbti1 = "";
+    var mbti2 = "";
+    var mbti3 = "";
+    var domF2 = arrayN[1];
+    var auxf2 = "";
+    var domF3 = arrayN[2];
+    var auxf3 = "";
+
+    if(domF1 == "te"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ni")){
+                auxf1 = "ni";
+                mbti1 = "ENTJ";
+                break;
+            }
+            if(arrayN[i].includes("si")){
+                auxf1 = "si";
+                mbti1 = "ESTJ";
+                break;
+            }
+        }
+    }else if(domF1 == "fe"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ni")){
+                auxf1 = "ni";
+                mbti1 = "ENFJ";
+                break;
+            }
+            if(arrayN[i].includes("si")){
+                auxf1 = "si";
+                mbti1 = "ESFJ";
+                break;
+            }
+        }
+    }else if(domF1 == "fi"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ne")){
+                auxf1 = "ne";
+                mbti1 = "INFP";
+                break;
+            }
+            if(arrayN[i].includes("se")){
+                auxf1 = "se";
+                mbti1 = "ISFP";
+                break;
+            }
+        }
+    }else if(domF1 == "ti"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ne")){
+                auxf1 = "ne";
+                mbti1 = "INTP";
+                break;
+            }
+            if(arrayN[i].includes("se")){
+                auxf1 = "se";
+                mbti1 = "ISTP";
+                break;
+            }
+        }
+    }else if(domF1 == "ne"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ti")){
+                auxf1 = "ti";
+                mbti1 = "ENTP";
+                break;
+            }
+            if(arrayN[i].includes("fi")){
+                auxf1 = "fi";
+                mbti1 = "ENFP";
+                break;
+            }
+        }
+    }else if(domF1 == "se"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ti")){
+                auxf1 = "ti";
+                mbti1 = "ESTP";
+                break;
+            }
+            if(arrayN[i].includes("fi")){
+                auxf1 = "fi";
+                mbti1 = "ESFP";
+                break;
+            }
+        }
+    }else if(domF1 == "ni"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("te")){
+                auxf1 = "te";
+                mbti1 = "INTJ";
+                break;
+            }
+            if(arrayN[i].includes("fe")){
+                auxf1 = "fe";
+                mbti1 = "INFJ";
+                break;
+            }
+        }
+    }else if(domF1 == "si"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("te")){
+                auxf1 = "te";
+                mbti1 = "ISTJ";
+                break;
+            }
+            if(arrayN[i].includes("fe")){
+                auxf1 = "fe";
+                mbti1 = "ISFJ";
+                break;
+            }
+        }
+    }
+
+
+    if(domF2 == "te"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ni")){
+                auxf2 = "ni";
+                mbti2 = "ENTJ";
+                break;
+            }
+            if(arrayN[i].includes("si")){
+                auxf2 = "si";
+                mbti2 = "ESTJ";
+                break;
+            }
+        }
+    }else if(domF2 == "fe"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ni")){
+                auxf2 = "ni";
+                mbti2 = "ENFJ";
+                break;
+            }
+            if(arrayN[i].includes("si")){
+                auxf2 = "si";
+                mbti2 = "ESFJ";
+                break;
+            }
+        }
+    }else if(domF2 == "fi"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ne")){
+                auxf2 = "ne";
+                mbti2 = "INFP";
+                break;
+            }
+            if(arrayN[i].includes("se")){
+                auxf2 = "se";
+                mbti2 = "ISFP";
+                break;
+            }
+        }
+    }else if(domF2 == "ti"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ne")){
+                auxf2 = "ne";
+                mbti2 = "INTP";
+                break;
+            }
+            if(arrayN[i].includes("se")){
+                auxf2 = "se";
+                mbti2 = "ISTP";
+                break;
+            }
+        }
+    }else if(domF2 == "ne"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ti")){
+                auxf2 = "ti";
+                mbti2 = "ENTP";
+                break;
+            }
+            if(arrayN[i].includes("fi")){
+                auxf2 = "fi";
+                mbti2 = "ENFP";
+                break;
+            }
+        }
+    }else if(domF2 == "se"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ti")){
+                auxf2 = "ti";
+                mbti2 = "ESTP";
+                break;
+            }
+            if(arrayN[i].includes("fi")){
+                auxf2 = "fi";
+                mbti2 = "ESFP";
+                break;
+            }
+        }
+    }else if(domF2 == "ni"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("te")){
+                auxf2 = "te";
+                mbti2 = "INTJ";
+                break;
+            }
+            if(arrayN[i].includes("fe")){
+                auxf2 = "fe";
+                mbti2 = "INFJ";
+                break;
+            }
+        }
+    }else if(domF == "si"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("te")){
+                auxf2 = "te";
+                mbti2 = "ISTJ";
+                break;
+            }
+            if(arrayN[i].includes("fe")){
+                auxf2 = "fe";
+                mbti2 = "ISFJ";
+                break;
+            }
+        }
+    }
+
+    if(domF3 == "te"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ni")){
+                auxf3 = "ni";
+                mbti3 = "ENTJ";
+                break;
+            }
+            if(arrayN[i].includes("si")){
+                auxf3 = "si";
+                mbti3 = "ESTJ";
+                break;
+            }
+        }
+    }else if(domF3 == "fe"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ni")){
+                auxf3 = "ni";
+                mbti3 = "ENFJ";
+                break;
+            }
+            if(arrayN[i].includes("si")){
+                auxf3 = "si";
+                mbti3 = "ESFJ";
+                break;
+            }
+        }
+    }else if(domF3 == "fi"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ne")){
+                auxf3 = "ne";
+                mbti3 = "INFP";
+                break;
+            }
+            if(arrayN[i].includes("se")){
+                auxf3 = "se";
+                mbti3 = "ISFP";
+                break;
+            }
+        }
+    }else if(domF3 == "ti"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ne")){
+                auxf3 = "ne";
+                mbti3 = "INTP";
+                break;
+            }
+            if(arrayN[i].includes("se")){
+                auxf3 = "se";
+                mbti3 = "ISTP";
+                break;
+            }
+        }
+    }else if(domF3 == "ne"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ti")){
+                auxf3 = "ti";
+                mbti3 = "ENTP";
+                break;
+            }
+            if(arrayN[i].includes("fi")){
+                auxf3 = "fi";
+                mbti3 = "ENFP";
+                break;
+            }
+        }
+    }else if(domF3 == "se"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("ti")){
+                auxf3 = "ti";
+                mbti3 = "ESTP";
+                break;
+            }
+            if(arrayN[i].includes("fi")){
+                auxf3 = "fi";
+                mbti3 = "ESFP";
+                break;
+            }
+        }
+    }else if(domF3 == "ni"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("te")){
+                auxf3 = "te";
+                mbti3 = "INTJ";
+                break;
+            }
+            if(arrayN[i].includes("fe")){
+                auxf3 = "fe";
+                mbti3 = "INFJ";
+                break;
+            }
+        }
+    }else if(domF3 == "si"){
+        for (var i = 0; i < 8; i++){
+            if(arrayN[i].includes("te")){
+                auxf3 = "te";
+                mbti3 = "ISTJ";
+                break;
+            }
+            if(arrayN[i].includes("fe")){
+                auxf3 = "fe";
+                mbti3 = "ISFJ";
+                break;
+            }
+        }
+    }
+
+
+
+    var resultsDiv = document.querySelector(".results");
+    resultsDiv.innerHTML = `
+        <div class="top3">
+        <h1>Your top 3 MBTI:</h1>
+        <h2>1.  ${mbti1}</h2>
+        <h2>2.  ${mbti2}</h2>
+        <h2>3.  ${mbti3}</h2>
+        </div>
+        <div class="top3f">
+        <h4>${domF1} Score: ${totalScoresArray[0]/10}%</h4>
+        <h4>${domF2} Score: ${totalScoresArray[1]/10}%</h4>
+
+        </div>
+        <h4 class="thirdF">${domF3} Score: ${totalScoresArray[2]/10}%</h4>
+        <h4 class="fourthF">${arrayN[3]} Score: ${totalScoresArray[3]/10}%</h4>
+        <h4 class="fifthF">${arrayN[4]} Score: ${totalScoresArray[4]/10}%</h4>
+        <h4 class="sixthF">${arrayN[5]} Score: ${totalScoresArray[5]/10}%</h4>
+        <h4 class="seventhF" >${arrayN[6]} Score: ${totalScoresArray[6]/10}%</h4>
+        <h4 class="eightthF">${arrayN[7]} Score: ${totalScoresArray[7]/10}%</h4>
+    `;
+
+    $(".first-page").hide();
+    $(".last-page").show();
+});
+
+$(".backToQuestions").on("click", function(){
+    $(".first-page").show();
+    $(".last-page").hide();
+});
+
+$("input").attr("draggable", "false");
