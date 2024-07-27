@@ -231,3 +231,72 @@ const neurotic = {
     highscore: 0,
     lowscore: 0
 };
+
+const ni = {
+    questions: Niq,
+    score: 0,
+};
+const ne = {
+    questions: Neq,
+    score: 0
+};
+const si = {
+    questions: Siq,
+    score: 0
+};
+const ti = {
+    questions: Tiq,
+    score: 0
+};
+const fi = {
+    questions: Fiq,
+    score: 0
+};
+const te = {
+    questions: Teq,
+    score: 0
+};
+const se = {
+    questions: Seq,
+    score: 0
+};
+const fe = {
+    questions: Feq,
+    score: 0
+};
+
+var pageNumMbti = 1;
+//the space below is to create question divs
+function randNumsArray(arraylennum){
+    var ranNumArray = [];
+    for(var i = 0; i < arraylennum; i++){
+        do{
+            var ranNum = Math.floor(arraylennum * Math.random());
+        }while(ranNumArray.includes(ranNum));
+        ranNumArray[i] = ranNum;
+    }
+    return ranNumArray;
+}
+
+function createQuestionsMbti(object, label) {
+    var page = $("<div></div>"); // Create a new div element
+    page.attr("id", "page" + pageNumMbti); // Set the ID using jQuery attr method
+    $("#mbtiTest .pages").append(page); // Append the new page to the container
+    pageNumMbti++;
+
+    for (var i = 0; i < object.questions.length; i++) {
+        var questionmbti = $("<div></div>"); // Create a new div for the question container
+        questionmbti.addClass("question-container"); // Add class using jQuery addClass method
+        questionmbti.addClass(label); // Add additional class
+        page.append(questionmbti); // Append the question container to the page
+
+        var question = $("<h3></h3>"); // Create a new h3 element
+        var rand = randNumsArray(object.questions.length); // Get an array of random indices
+        question.text(object.questions[rand[i]]); // Set the text of the question using jQuery text method
+
+        questionmbti.append(question); // Append the question to the question container
+    }
+}
+
+
+createQuestionsMbti(fe, "fe");
