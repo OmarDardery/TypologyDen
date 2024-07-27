@@ -320,4 +320,7 @@ for(var i = 0; i < 8; i++){
 }
 $(".page").hide();
 $("#page1").show();
+var pageNumberMbti = 1;
+$("#mbtiTest .numbers").text(pageNumberMbti + "/8");
 
+$(".submit").hide();
