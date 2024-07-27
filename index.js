@@ -762,3 +762,7 @@ $(".backToQuestions").on("click", function(){
 });
 
 $("input").attr("draggable", "false");
+
+$("button").on("click", function(){
+    $("html, body").animate({ scrollTop: 0 }, 600);
+});

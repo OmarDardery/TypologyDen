@@ -86,15 +86,15 @@
         top: 55px;
     }
     .topPart{
-        height: 131px;
+        height: 161px;
     }
 }
-@media (max-width: 336px) {
+@media (max-width: 335px) {
     .menubutton{
         top: 65px;
     }
     .topPart{
-        height: 131px;
+        height: 171px;
     }
 }
 body{
@@ -263,17 +263,24 @@ body{
     background-color: #ff204e; 
     justify-content: space-around;
     align-items: center;
-    font-size: 20px;
+    font-size: 30px;
     transition: transform 0.2s ease-in-out;
     color: #f8eded;
     border-radius: 30px;
+    border: 2px solid black;
 }
 .hidden-warning{
     transform: translatey(-170%);
 }
 .closewarning{
-    height: 20px;
+    height: fit-content;
     align-self: center;
+    font-size: 30px;
+    color: #151515;
+    background-color: #b1afaf;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px soid #00224d;
 }
 .results{
     background-color: #d3d3d3;
