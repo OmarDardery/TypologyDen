@@ -36,3 +36,11 @@ menuButton.on("click", function() {
 });
 // the part above is for the menu functionality
 // the part below is for the rest
+function loadTest(testName){
+    $(".test-container").hide();
+    $("#" + testName + "Test").removeClass("hidden");
+}
+
+$(".test-container").on("click", function(){
+    loadTest($(this).attr("id"));
+});

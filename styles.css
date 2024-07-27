@@ -65,9 +65,7 @@
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
 }
-.hidden{
-    display: none;
-}
+
 .opacityy{
     opacity: 0.5;
 }
@@ -124,4 +122,8 @@ body{
     transform: translateY(-10%);
     transform: translateZ(2); /* Slightly scale the element on hover */
     color: #003172;
+}
+
+.hidden{
+    display: none;
 }
