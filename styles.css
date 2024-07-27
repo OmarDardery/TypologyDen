@@ -174,6 +174,10 @@ body{
     color: #f8eded;
     min-width: 300px;
     font-size: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
 }
 
 .inputDiv{
@@ -186,7 +190,7 @@ body{
 
 }
 input[type="range"]{
-    width: max-content;
+    width: 100%;
     -webkit-appearance: none;
     height: 5px;
     background: #d3d3d3;
@@ -261,7 +265,7 @@ body{
     background-color: #ff204e; 
     justify-content: space-around;
     align-items: center;
-    font-size: 30px;
+    font-size: 170%;
     transition: transform 0.2s ease-in-out;
     color: #f8eded;
     border-radius: 30px;
@@ -276,7 +280,7 @@ body{
     font-size: 30px;
     color: #151515;
     background-color: #b1afaf;
-    border-radius: 50%;
+    border-radius: 7px;
     padding: 5px;
     border: 2px soid #00224d;
 }
