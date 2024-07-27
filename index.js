@@ -306,7 +306,7 @@ function createQuestionsMbti(object) {
         question.text(object.questions[rand[i]]); // Set the text of the question using jQuery text method
         question.addClass("question");
         questionmbti.append(question); // Append the question to the question container
-        var inputDiv = $(`<div class = 'inputDiv'><h5 style='font-size: 15px'>Not At All Relatable</h5><input class = ${object.label} type = 'range' min = '0' max = '100' value='50'><h5 style='fontsize: 15px'>Very Relatable</h5></div>`);
+        var inputDiv = $(`<div class = 'inputDiv'><h5>Not At All Relatable</h5><input class = ${object.label} type = 'range' min = '0' max = '100' value='50'><h5>Very Relatable</h5></div>`);
         questionmbti.append(inputDiv);
     }
 }
@@ -763,6 +763,6 @@ $(".backToQuestions").on("click", function(){
 
 $("input").attr("draggable", "false");
 
-$("button").on("click", function(){
+$(".toppp").on("click", function(){
     $("html, body").animate({ scrollTop: 0 }, 600);
 });
