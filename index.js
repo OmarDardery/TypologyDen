@@ -325,7 +325,7 @@ $("#mbtiTest .numbers").text(pageNumberMbti + "/8");
 
 $(".submit").hide();
 
-$(".next").on("click", function(){
+$("#mbtiTest .next").on("click", function(){
     if(pageNumberMbti == 8){
         $(".end").removeClass("hidden-warning");
         $(".closewarning").one("click", function(){
@@ -342,7 +342,7 @@ $(".next").on("click", function(){
     $("#mbtiTest .numbers").text(pageNumberMbti + "/8");
 });
 
-$(".previous").on("click", function(){
+$("#mbtiTest .previous").on("click", function(){
     if(pageNumberMbti == 1){
         $(".start").removeClass("hidden-warning");
         $(".closewarning").one("click", function(){
@@ -766,3 +766,7 @@ $("input").attr("draggable", "false");
 $(".toppp").on("click", function(){
     $("html, body").animate({ scrollTop: 0 }, 600);
 });
+
+
+
+
