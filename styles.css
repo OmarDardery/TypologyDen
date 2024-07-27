@@ -18,6 +18,7 @@
     align-self: center;
     margin: 0;
     margin-right: 68px;
+    cursor: pointer;
 }
 .cred{
     align-self: flex-end;
@@ -96,7 +97,7 @@ body{
     align-items: center;
     z-index: 0;
 }
-.test-container{
+.test-name{
     height: 20%;
     width: 70%;
     background-color: aliceblue;
@@ -117,7 +118,7 @@ body{
     height: 600px;
 }
 
-.test-container:hover {/* Change background color on hover */
+.test-name:hover {/* Change background color on hover */
     background-color: gray;
     transform: translateY(-10%);
     transform: translateZ(2); /* Slightly scale the element on hover */
@@ -126,4 +127,10 @@ body{
 
 .hidden{
     display: none;
+}
+
+.test-container{
+    width: 100%;
+    height: fit-content;
+    font-size: 100px;
 }

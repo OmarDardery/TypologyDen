@@ -35,12 +35,18 @@ menuButton.on("click", function() {
     }
 });
 // the part above is for the menu functionality
-// the part below is for the rest
+// the part below is for loading tests
 function loadTest(testName){
-    $(".test-container").hide();
+    $(".test-name").hide();
     $("#" + testName + "Test").removeClass("hidden");
 }
 
-$(".test-container").on("click", function(){
+$(".test-name").on("click", function(){
     loadTest($(this).attr("id"));
+});
+
+//the code below is for loading the home of the site.
+
+$(".homeButton").on("click", function(){
+    window.location.reload();
 });
