@@ -1299,8 +1299,7 @@ $("#enneagramTest .submit").on("click", function(){
         options: {
             plugins: {
                 responsive: true,
-                maintainAspectRatio: true,
-                aspectRatio: 1,
+
                 variableRadiusPlugin: true, // Enable the custom plugin
                 title: {
                     display: true,
