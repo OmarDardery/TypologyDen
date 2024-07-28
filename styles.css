@@ -130,7 +130,7 @@ body{
     max-width: 300px;
 }
 .bottomPart{
-    height: 25px;
+    height: 5px;
 }
 
 .test-name:hover {/* Change background color on hover */
@@ -162,7 +162,7 @@ body{
     align-items: center;
 }
 .question-container{
-    background-color: #8b2a47;
+    background-color: #891e3c;
     width: 60%;
     max-width: 400px;
     text-align: center;
@@ -176,6 +176,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: space-between;
+    border: 2px solid black;
 }
 
 .inputDiv{
@@ -365,7 +366,7 @@ body{
     height: fit-content;
     margin: 0;
     padding: 0;
-    max-height: 600px;
+    max-height: 700px;
     width: 100%;
     max-width: 400px;
     min-width: 400px;
