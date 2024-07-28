@@ -1273,7 +1273,7 @@ $("#enneagramTest .submit").on("click", function(){
             for (let i = 0; i < totalSectors; i++) {
                 const startAngle = i * angle - Math.PI / 2;
                 const endAngle = startAngle + angle;
-                const radius = data.datasets[0].data[i] / 4; // Scale radius for visibility
+                const radius = data.datasets[0].data[i] / 6; // Scale radius for visibility
 
                 ctx.beginPath();
                 ctx.moveTo(centerX, centerY);
