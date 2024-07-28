@@ -320,7 +320,7 @@ for(var i = 0; i < 8; i++){
     createQuestionsMbti(mbtiObjects[l[i]]);
 }
 $(".page").hide();
-$("#page1").show();
+$(".page1").show();
 var pageNumberMbti = 1;
 $("#mbtiTest .numbers").text(pageNumberMbti + "/8");
 
@@ -768,5 +768,212 @@ $(".toppp").on("click", function(){
     $("html, body").animate({ scrollTop: 0 }, 600);
 });
 
+/*
+.
+.
+.
+.
+.
+enneagram */
+const e1 = {
+    questions: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e1"
+}
+const e2 = {
+    questions: [
+        "hey",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e2"
+}
+const e3 = {
+    questions: [
+        "hi",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e3"
+}
+const e4 = {
+    questions: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e4"
+}
+const e5 = {
+    questions: [
+        "wassup",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e5"
+}
+const e6 = {
+    questions: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e6"
+}
+const e7 = {
+    questions: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e7"
+}
+const e8 = {
+    questions: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e8"
+}
+const e9 = {
+    questions: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    score: 0,
+    label: "e9"
+}
 
 
+var pageNumEnneagram = 1;
+
+function createQuestionsEnneagram(object) {
+    var page = $("<div></div>"); // Create a new div element
+    page.attr("id", "Epage" + pageNumEnneagram); // Set the ID using jQuery attr method
+    $("#enneagramTest .pages").append(page); // Append the new page to the container
+    pageNumEnneagram++;
+    page.addClass("page");
+    var rand = randNumsArray(object.questions.length);
+    for (var i = 0; i < object.questions.length; i++) {
+        var questionenneagram = $("<div></div>"); // Create a new div for the question container
+        questionenneagram.addClass("question-container"); // Add class using jQuery addClass method
+        page.append(questionenneagram); // Append the question container to the page
+
+        var question = $("<h4></h4>"); // Create a new h3 element
+         // Get an array of random indices
+        question.text(object.questions[rand[i]]); // Set the text of the question using jQuery text method
+        question.addClass("question");
+        questionenneagram.append(question); // Append the question to the question container
+        var inputDiv = $(`<div class = 'inputDiv'><h5>Not At All Relatable</h5><input class = ${object.label} type = 'range' min = '0' max = '100' value='50'><h5>Very Relatable</h5></div>`);
+        questionenneagram.append(inputDiv);
+    }
+}
+
+createQuestionsEnneagram(e1);
+createQuestionsEnneagram(e2);
+createQuestionsEnneagram(e3);
+createQuestionsEnneagram(e4);
+createQuestionsEnneagram(e5);
+createQuestionsEnneagram(e6);
+createQuestionsEnneagram(e7);
+createQuestionsEnneagram(e8);
+createQuestionsEnneagram(e9);
+
+var pageNumberEnneagram = 1;
+$(".page").hide();
+$("#Epage1").show();
+
+$("#enneagramTest .numbers").text(pageNumberEnneagram + "/8");
+
+$("#enneagramTest .next").on("click", function(){
+    if(pageNumberEnneagram == 8){
+        $(".end").removeClass("hidden-warning");
+        $(".closewarning").one("click", function(){
+            $(".end").addClass("hidden-warning");
+        });
+    }else{
+        pageNumberEnneagram++;
+        $(".page").hide();
+        $("#Epage" +pageNumberEnneagram).show();
+        if(pageNumberEnneagram == 8){
+            $(".submit").show();
+        }
+    }
+    $("#enneagramTest .numbers").text(pageNumberEnneagram + "/8");
+});
+
+$("#enneagramTest .previous").on("click", function(){
+    if(pageNumberEnneagram == 1){
+        $(".start").removeClass("hidden-warning");
+        $(".closewarning").one("click", function(){
+            $(".start").addClass("hidden-warning");
+        });
+    }else{
+        pageNumberEnneagram--;
+        $(".page").hide();
+        $("#Epage"  +pageNumberEnneagram).show();
+    }
+    $("#enneagramTest .numbers").text(pageNumberEnneagram + "/8");
+});
+
+
+$("#enneagramTest .submit").on("click", function(){
+    e1.score = calculateScore(e1.label);
+    e2.score = calculateScore(e2.label);
+    e3.score = calculateScore(e3.label);
+    e4.score = calculateScore(e4.label);
+    e5.score = calculateScore(e5.label);
+    e6.score = calculateScore(e6.label);
+    e7.score = calculateScore(e7.label);
+    e8.score = calculateScore(e8.label);
+    e9.score = calculateScore(e9.label);
+});
