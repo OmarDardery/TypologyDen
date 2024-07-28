@@ -40,6 +40,7 @@ menuButton.on("click", function() {
 // the part below is for loading tests
 function loadTest(testName){
     $(".test-name").hide();
+    $(".body-container").hide();
     $("#" + testName + "Test").removeClass("hidden");
 }
 
@@ -766,7 +767,6 @@ $("input").attr("draggable", "false");
 $(".toppp").on("click", function(){
     $("html, body").animate({ scrollTop: 0 }, 600);
 });
-
 
 
 

@@ -27,7 +27,7 @@
 }
 .menubutton{
     transition: transform 0.5s;
-    z-index: 5;
+    z-index: 170;
     position: fixed;
     top: 29px;
     left: 11px;
@@ -40,9 +40,7 @@
     transform: translateX(-110%);
     
 }
-.opaque{
-    opacity: 0.4;
-}
+
 .menu{
     left: 0;
     height: 100%;
@@ -50,7 +48,7 @@
     background-color: #173b45;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 4;
     transition: transform 0.3s ease-in-out;
     padding: 10px;
 }
@@ -61,7 +59,7 @@
     width: 100%;
     background-color: black;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
@@ -247,7 +245,7 @@ input[type="range"]:hover {
     align-items: center;
     border: 3px solid #f8eded;
 }
-button:hover{
+button:not(.menubutton):hover{
     opacity: 0.6;
     cursor: pointer;
 }
@@ -345,4 +343,7 @@ body{
 
 .eightthF{
     grid-area: 7 / 5 / 8 / 7;
+}
+.page-nav-item{
+    z-index: 1;
 }
