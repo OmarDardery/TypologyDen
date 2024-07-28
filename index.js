@@ -1157,7 +1157,7 @@ function createQuestionsEnneagram(object) {
         question.text(object.questions[rand[i]]); // Set the text of the question using jQuery text method
         question.addClass("question");
         questionenneagram.append(question); // Append the question to the question container
-        var inputDiv = $(`<div class = 'inputDiv'><h5>Not At All Relatable</h5><input class = ${object.label} type = 'range' min = '0' max = '100' value='100'><h5>Very Relatable</h5></div>`);
+        var inputDiv = $(`<div class = 'inputDiv'><h5>Not At All Relatable</h5><input class = ${object.label} type = 'range' min = '0' max = '100' value='50'><h5>Very Relatable</h5></div>`);
         questionenneagram.append(inputDiv);
     }
 }
