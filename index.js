@@ -813,7 +813,8 @@ const e1 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "1"
 }
 const e2 = {
     questions: [
@@ -853,7 +854,8 @@ const e2 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "2"
 }
 const e3 = {
     questions: [
@@ -893,7 +895,8 @@ const e3 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "3"
 }
 const e4 = {
     questions: [
@@ -933,7 +936,8 @@ const e4 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "4"
 }
 const e5 = {
     questions: [
@@ -974,7 +978,8 @@ const e5 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "5"
 }
 const e6 = {
     questions: [
@@ -1014,7 +1019,8 @@ const e6 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "6"
 }
 const e7 = {
     questions: [
@@ -1054,7 +1060,9 @@ const e7 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "7"
+    
 }
 const e8 = {
     questions: [
@@ -1094,7 +1102,8 @@ const e8 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "8"
 }
 const e9 = {
     questions: [
@@ -1134,7 +1143,8 @@ const e9 = {
         "good to see you", 
         "my nigga", 
         "goodbye", 
-        "my nigga"]
+        "my nigga"],
+    name: "9"
 }
 
 
@@ -1327,10 +1337,29 @@ $("#enneagramTest .submit").on("click", function(){
             }
         }
     };
-    
+    var head = {
+        score: [e5.score, e6.score, e7.score],
+        name: [e5.name, e6.name, e7.name]
+    }
+
+    var heart = {
+        score: [e2.score, e3.score, e4.score],
+        name: [e2.name, e3.name, e4.name]
+    }
+
+    var gut = {
+        score: [e8.score, e9.score, e1.score],
+        name: [e8.name, e8.name, e1.name]
+    }
+    sort(head.score, head.name);
+    sort(heart.score, heart.name);
+    sort(gut.score, gut.name);
+    var triscore = [head.score[0], heart.score[0], gut.score[0]];
+    var tritype = [head.name[0], heart.name[0], gut.name[0]];
+    sort(triscore, tritype);
     // Render the chart
     var resultsDiv = document.querySelector("#enneagramTest .results");
-    resultsDiv.innerHTML = `<canvas id="pieChartEnneagram"></canvas>`;
+    resultsDiv.innerHTML = `<canvas id="pieChartEnneagram"></canvas><p id='tritype'>Your Tritype Is: ${tritype[0]}${tritype[1]}${tritype[2]}</p>`;
     
     const ctx = document.getElementById('pieChartEnneagram').getContext('2d');
     new Chart(ctx, config);
