@@ -777,14 +777,14 @@ $(".toppp").on("click", function(){
 enneagram */
 const e1 = {
     questions: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I am very organized.",
+        "I am a workaholic.",
+        "I am very consistent.", 
+        "I am scared of commiting mistakes.", 
+        "My morals are strong.", 
+        "I search for purpose and meaning in life.", 
+        "I am hard on myself.", 
+        "I always justify my behavior."],
     score: 0,
     label: "e1",
     so: [
@@ -817,14 +817,14 @@ const e1 = {
 }
 const e2 = {
     questions: [
-        "hey",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I am approachable.",
+        "I often overshare my personal problems.",
+        "I seek to help others.", 
+        "I am too critical of others when I am under a ton of friends.", 
+        "I strive to have good influence on people around me.", 
+        "I am very extraverted.", 
+        "I had to take a great amount of responsibility when I was younger.", 
+        "I emphasize with people easily."],
     score: 0,
     label: "e2",
     so: [
@@ -857,14 +857,14 @@ const e2 = {
 }
 const e3 = {
     questions: [
-        "hi",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I love getting admiration.",
+        "I strive to be an over-achiever.",
+        "My ambitions are very high.", 
+        "I change my personality around different people.", 
+        "I get jelous when I am not the best.", 
+        "I am often seen as arrogant.", 
+        "I compare myself to others often.", 
+        "I must be the best, not just 'good'."],
     score: 0,
     label: "e3",
     so: [
@@ -897,14 +897,14 @@ const e3 = {
 }
 const e4 = {
     questions: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I am often emotional.",
+        "I strive to be unique.",
+        "I search for aesthetics in everything.", 
+        "I get offended easily.", 
+        "I struggle with my Identity.", 
+        "I value originality.", 
+        "I seek happiness, yet i feel unworthy of it.", 
+        "'I wont be chosen if I am not unique'."],
     score: 0,
     label: "e4",
     so: [
@@ -937,14 +937,14 @@ const e4 = {
 }
 const e5 = {
     questions: [
-        "wassup",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I am curious by nature.",
+        "I love theorizing.",
+        "I always want to feel capable.", 
+        "I love the unknown and the unusual.", 
+        "I often isolate myself.", 
+        "I love to think about complex ideas.", 
+        "I am very observant.", 
+        "I have a hard time expressing feelings."],
 
     score: 0,
     label: "e5",
@@ -978,18 +978,18 @@ const e5 = {
 }
 const e6 = {
     questions: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I am often anxious.",
+        "I rely on external sources for support.",
+        "I am scared of life changing decisions.", 
+        "Uner stress, I start blaming others.", 
+        "I seek support and guidance.", 
+        "I like to be prepared for everything.", 
+        "I worry a lot.", 
+        "I often ignore my instincts."],
     score: 0,
     label: "e6",
     so: [
-        "hello",
+        "I am often anxious.",
         "my nigga",
         "how are you", 
         "my nigga", 
@@ -1018,14 +1018,14 @@ const e6 = {
 }
 const e7 = {
     questions: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I often procrastinate but rarely I am extremely productive.",
+        "I value freedom.",
+        "I have commitment issues.", 
+        "I am want to try everything to have a better chance to find the ideal thing.", 
+        "I am often imatient.", 
+        "I have questionable coping mechanisms.", 
+        "I am scared of missing out on things.", 
+        "I avoid pain and being hung up on negative things."],
     score: 0,
     label: "e7",
     so: [
@@ -1058,14 +1058,14 @@ const e7 = {
 }
 const e8 = {
     questions: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I hate not being in control.",
+        "People are often intimited by me.",
+        "I am stubborn.", 
+        "I am vey detemined.", 
+        "I am self-assertive.", 
+        "I often feel misunderstood.", 
+        "I have a short temper.", 
+        "I am afraid of being vulnerable."],
     score: 0,
     label: "e8",
     so: [
@@ -1098,14 +1098,14 @@ const e8 = {
 }
 const e9 = {
     questions: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
+        "I am a peace keeper.",
+        "I avoid conflict as much as possible.",
+        "I try too hard to fit in.", 
+        "I find it extremely hard to say no.", 
+        "I try as hard as I can to be admired.", 
+        "i care about people's opinions.", 
+        "I wait for my problems to solve themselves.", 
+        "I deny the bad parts of life."],
     score: 0,
     label: "e9",
     so: [
