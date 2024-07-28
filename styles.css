@@ -71,7 +71,7 @@
 .topPart{
     height: 110px;
 }
-@media (max-width: 555px) {
+@media (max-width: 556px) {
     .menubutton{
         top: 38px;
     }
@@ -79,7 +79,7 @@
         height: 131px;
     }
 }
-@media (max-width: 350px) {
+@media (max-width: 349px) {
     .menubutton{
         top: 55px;
     }
@@ -87,7 +87,7 @@
         height: 161px;
     }
 }
-@media (max-width: 335px) {
+@media (max-width: 334px) {
     .menubutton{
         top: 65px;
     }
@@ -370,7 +370,7 @@ body{
     max-height: 700px;
     width: 100%;
     max-width: 400px;
-    min-width: 350px;
+    min-width: 390px;
     z-index: 1;
 }
 #enneagramChartContainer{
