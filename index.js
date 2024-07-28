@@ -732,7 +732,7 @@ $("#mbtiTest .submit").on("click", function(){
 
 
 
-    var resultsDiv = document.querySelector(".results");
+    var resultsDiv = document.querySelector("#mbtiTest .results");
     resultsDiv.innerHTML = `
         <div class="top3">
         <h1>Your top 3 MBTI:</h1>
@@ -753,13 +753,13 @@ $("#mbtiTest .submit").on("click", function(){
         <h4 class="eightthF">${arrayN[7]} Score: ${totalScoresArray[7]/10}%</h4>
     `;
 
-    $(".first-page").hide();
-    $(".last-page").show();
+    $("#mbtiTest .first-page").hide();
+    $("#mbtiTest .last-page").show();
 });
 
-$(".backToQuestions").on("click", function(){
-    $(".first-page").show();
-    $(".last-page").hide();
+$("#mbtiTest .backToQuestions").on("click", function(){
+    $("#mbtiTest .first-page").show();
+    $("#mbtiTest .last-page").hide();
 });
 
 $("input").attr("draggable", "false");
@@ -786,7 +786,34 @@ const e1 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e1"
+    label: "e1",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e2 = {
     questions: [
@@ -799,7 +826,34 @@ const e2 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e2"
+    label: "e2",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e3 = {
     questions: [
@@ -812,7 +866,34 @@ const e3 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e3"
+    label: "e3",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e4 = {
     questions: [
@@ -825,7 +906,34 @@ const e4 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e4"
+    label: "e4",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e5 = {
     questions: [
@@ -837,8 +945,36 @@ const e5 = {
         "my nigga", 
         "goodbye", 
         "my nigga"],
+
     score: 0,
-    label: "e5"
+    label: "e5",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e6 = {
     questions: [
@@ -851,7 +987,34 @@ const e6 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e6"
+    label: "e6",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e7 = {
     questions: [
@@ -864,7 +1027,34 @@ const e7 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e7"
+    label: "e7",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e8 = {
     questions: [
@@ -877,7 +1067,34 @@ const e8 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e8"
+    label: "e8",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 const e9 = {
     questions: [
@@ -890,7 +1107,34 @@ const e9 = {
         "goodbye", 
         "my nigga"],
     score: 0,
-    label: "e9"
+    label: "e9",
+    so: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sp: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"],
+    sx: [
+        "hello",
+        "my nigga",
+        "how are you", 
+        "my nigga", 
+        "good to see you", 
+        "my nigga", 
+        "goodbye", 
+        "my nigga"]
 }
 
 
@@ -932,10 +1176,10 @@ var pageNumberEnneagram = 1;
 $(".page").hide();
 $("#Epage1").show();
 
-$("#enneagramTest .numbers").text(pageNumberEnneagram + "/8");
+$("#enneagramTest .numbers").text(pageNumberEnneagram + "/9");
 
 $("#enneagramTest .next").on("click", function(){
-    if(pageNumberEnneagram == 8){
+    if(pageNumberEnneagram == 9){
         $(".end").removeClass("hidden-warning");
         $(".closewarning").one("click", function(){
             $(".end").addClass("hidden-warning");
@@ -944,11 +1188,11 @@ $("#enneagramTest .next").on("click", function(){
         pageNumberEnneagram++;
         $(".page").hide();
         $("#Epage" +pageNumberEnneagram).show();
-        if(pageNumberEnneagram == 8){
+        if(pageNumberEnneagram == 9){
             $(".submit").show();
         }
     }
-    $("#enneagramTest .numbers").text(pageNumberEnneagram + "/8");
+    $("#enneagramTest .numbers").text(pageNumberEnneagram + "/9");
 });
 
 $("#enneagramTest .previous").on("click", function(){
@@ -962,7 +1206,7 @@ $("#enneagramTest .previous").on("click", function(){
         $(".page").hide();
         $("#Epage"  +pageNumberEnneagram).show();
     }
-    $("#enneagramTest .numbers").text(pageNumberEnneagram + "/8");
+    $("#enneagramTest .numbers").text(pageNumberEnneagram + "/9");
 });
 
 
@@ -976,4 +1220,126 @@ $("#enneagramTest .submit").on("click", function(){
     e7.score = calculateScore(e7.label);
     e8.score = calculateScore(e8.label);
     e9.score = calculateScore(e9.label);
+
+    
+
+    var enneagramScores = [e1.score, e2.score, e3.score, e4.score, e5.score, e6.score, e7.score, e8.score, e9.score];
+    var enneagramLabels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    sort(enneagramScores, enneagramLabels);
+
+    // Calculate the wing
+    var wing = "";
+    for (var i = 0; i < 9; i++) {
+        if (enneagramLabels[0] == 9) {
+            if ((enneagramLabels[0] - 1) == enneagramLabels[i] || (1) == enneagramLabels[i]) {
+                wing = enneagramLabels[i];
+                break;
+            }
+        } else if (enneagramLabels[0] == 1) {
+            if ((enneagramLabels[0] + 1) == enneagramLabels[i] || (9) == enneagramLabels[i]) {
+                wing = enneagramLabels[i];
+                break;
+            }
+        } else {
+            if ((enneagramLabels[0] - 1) == enneagramLabels[i] || (enneagramLabels[0] + 1) == enneagramLabels[i]) {
+                wing = enneagramLabels[i];
+                break;
+            }
+        }
+    }
+
+    // Define the data for the chart
+    const data = {
+        labels: ['Enneagram 1', 'Enneagram 2', 'Enneagram 3', 'Enneagram 4', 'Enneagram 5', 'Enneagram 6', 'Enneagram 7', 'Enneagram 8', 'Enneagram 9'],
+        datasets: [{
+            label: 'Variable Radius Pie Chart',
+            data: enneagramScores,
+            backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33A8', '#33FFF7', '#F7FF33', '#8E33FF', '#FF8E33', '#FF338E'],
+            borderColor: '#FFFFFF'
+        }]
+    };
+
+    // Custom plugin for variable radii pie chart
+    const variableRadiusPlugin = {
+        id: 'variableRadiusPlugin',
+        beforeDatasetsDraw(chart) {
+            const {ctx, chartArea: {top, bottom, left, right, width, height}, data} = chart;
+            const centerX = (left + right) / 2;
+            const centerY = (top + bottom) / 2;
+            const totalSectors = data.datasets[0].data.length;
+            const angle = 2 * Math.PI / totalSectors;
+
+            ctx.save();
+            for (let i = 0; i < totalSectors; i++) {
+                const startAngle = i * angle - Math.PI / 2;
+                const endAngle = startAngle + angle;
+                const radius = data.datasets[0].data[i] / 4; // Scale radius for visibility
+
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+                ctx.lineTo(centerX, centerY);
+                ctx.fillStyle = chart.data.datasets[0].backgroundColor[i];
+                ctx.fill();
+                ctx.stroke();
+            }
+            ctx.restore();
+
+            return false; // Prevent Chart.js from drawing the dataset
+        }
+    };
+
+    // Register the custom plugin
+    Chart.register(variableRadiusPlugin);
+
+    // Configuration for the pie chart
+    const config = {
+        type: 'doughnut', // Use 'doughnut' to create the outer ring and then use the plugin for custom drawing
+        data: data,
+        options: {
+            plugins: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 1,
+                variableRadiusPlugin: true, // Enable the custom plugin
+                title: {
+                    display: true,
+                    text: `Your Enneagram Type Is: ${enneagramLabels[0]}w${wing}`,
+                    font: {
+                        size: 18,
+                        family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                        weight: 'bold',
+                    },
+                    padding: {
+                        top: 20,
+                        bottom: 20
+                    }
+                }
+            }
+        }
+    };
+
+    // Render the chart
+    var resultsDiv = document.querySelector("#enneagramTest .results");
+    resultsDiv.innerHTML = `<canvas id="pieChartEnneagram"></canvas>`;
+
+    const ctx = document.getElementById('pieChartEnneagram').getContext('2d');
+    new Chart(ctx, config);
+
+
+    $("#enneagramTest .first-page").hide();
+    $("#enneagramTest .last-page").show();
+    
+
+    $("#enneagramTest .backToQuestions").on("click", function(){
+        $("#enneagramTest .first-page").show();
+        $("#enneagramTest .last-page").hide();
+    });
 });
+
+
+
+$(".first-page").show();
+$(".last-page").hide();
+$("#Epage1").show();
+$("#page1").show();;

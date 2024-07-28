@@ -255,7 +255,7 @@ body{
 .warning{
     display: flex;
     position: fixed;
-    width: 80%; 
+    width: 70%; 
     left: 10%; 
     top: 30px; 
     padding: 10px; 
@@ -347,3 +347,27 @@ body{
 .page-nav-item{
     z-index: 1;
 }
+.canvas{
+    height: 600px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+#pieChartEnneagram {
+    display: block;
+    margin: 0px;
+    width: 100%;
+    height: fit-content;
+    font-size: 110%;
+    margin: 0;
+}
+#enneagramTest .results{
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    max-height: 600px;
+    width: 70%;
+}
+
