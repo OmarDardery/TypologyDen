@@ -1223,7 +1223,7 @@ $("#enneagramTest .submit").on("click", function(){
 
     
 
-    var enneagramScores = [e1.score, e2.score, e3.score, e4.score, e5.score, e6.score, e7.score, e8.score, e9.score];
+    var enneagramScores = [e1.score / 8, e2.score / 8, e3.score / 8, e4.score / 8, e5.score / 8, e6.score / 8, e7.score / 8, e8.score / 8, e9.score / 8];
     var enneagramLabels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     sort(enneagramScores, enneagramLabels);
 
@@ -1252,13 +1252,13 @@ $("#enneagramTest .submit").on("click", function(){
     const data = {
         labels: ['Enneagram 1', 'Enneagram 2', 'Enneagram 3', 'Enneagram 4', 'Enneagram 5', 'Enneagram 6', 'Enneagram 7', 'Enneagram 8', 'Enneagram 9'],
         datasets: [{
-            label: 'Variable Radius Pie Chart',
             data: enneagramScores,
-            backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33A8', '#33FFF7', '#F7FF33', '#8E33FF', '#FF8E33', '#FF338E'],
-            borderColor: '#FFFFFF'
+            backgroundColor: ['#80af81', '#405d72','#7c00fe','#1a5319' , '#bc9f8b', '#e68369', '#ef5a6f', '#ffc700', '#c80036'],
+            borderColor: '#d3d3d3',
+            hoverOffset: 20
         }]
     };
-
+    
     // Custom plugin for variable radii pie chart
     const variableRadiusPlugin = {
         id: 'variableRadiusPlugin',
@@ -1268,13 +1268,13 @@ $("#enneagramTest .submit").on("click", function(){
             const centerY = (top + bottom) / 2;
             const totalSectors = data.datasets[0].data.length;
             const angle = 2 * Math.PI / totalSectors;
-
+    
             ctx.save();
             for (let i = 0; i < totalSectors; i++) {
                 const startAngle = i * angle - Math.PI / 2;
                 const endAngle = startAngle + angle;
-                const radius = data.datasets[0].data[i] / 6; // Scale radius for visibility
-
+                const radius = data.datasets[0].data[i] * 1.5; // Scale radius for visibility
+    
                 ctx.beginPath();
                 ctx.moveTo(centerX, centerY);
                 ctx.arc(centerX, centerY, radius, startAngle, endAngle);
@@ -1284,22 +1284,23 @@ $("#enneagramTest .submit").on("click", function(){
                 ctx.stroke();
             }
             ctx.restore();
-
+    
             return false; // Prevent Chart.js from drawing the dataset
         }
     };
-
+    
     // Register the custom plugin
     Chart.register(variableRadiusPlugin);
-
+    
     // Configuration for the pie chart
     const config = {
         type: 'doughnut', // Use 'doughnut' to create the outer ring and then use the plugin for custom drawing
         data: data,
         options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1, // Maintain a 1:1 aspect ratio
             plugins: {
-                responsive: true,
-
                 variableRadiusPlugin: true, // Enable the custom plugin
                 title: {
                     display: true,
@@ -1313,17 +1314,27 @@ $("#enneagramTest .submit").on("click", function(){
                         top: 20,
                         bottom: 20
                     }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            const index = tooltipItem.dataIndex;
+                            const score = data.datasets[0].data[index];
+                            return `   ${score}%`; // Add the percentage symbol here
+                        }
+                    }
                 }
             }
         }
     };
-
+    
     // Render the chart
     var resultsDiv = document.querySelector("#enneagramTest .results");
     resultsDiv.innerHTML = `<canvas id="pieChartEnneagram"></canvas>`;
-
+    
     const ctx = document.getElementById('pieChartEnneagram').getContext('2d');
     new Chart(ctx, config);
+    
 
 
     $("#enneagramTest .first-page").hide();

@@ -298,6 +298,7 @@ body{
     height: fit-content;
     align-self: center;
     font-size: 150%;
+
 }
 .results-container{
     display: flex;
@@ -369,8 +370,10 @@ body{
     max-height: 700px;
     width: 100%;
     max-width: 400px;
-    min-width: 400px;
+    min-width: 350px;
+    z-index: 1;
 }
 #enneagramChartContainer{
     width: 100%;
+    height: fit-content;
 }
