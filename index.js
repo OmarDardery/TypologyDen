@@ -1237,6 +1237,20 @@ $("#big5Test .submit").on("click", function(){
                 },
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.y !== null) {
+                                label += context.parsed.y + '%'; // Add percentage symbol
+                            }
+                            return label;
+                        }
+                    }
                 }
             },
             animations: {
@@ -1257,7 +1271,8 @@ $("#big5Test .submit").on("click", function(){
                     offset: true
                 }
               }
-            }
+            },
+            maintainAspectRatio: false
         }
     };
     

@@ -381,7 +381,7 @@ body{
     height: fit-content;
 }
 #barChartBig5{
-    height: 600px;
+    height: 400px;
 }
 #big5Test .results{
     display: flex;
@@ -393,9 +393,7 @@ body{
     margin: 0;
     padding: 0;
     max-height: 800px;
-    width: 100%;
-    max-width: 400px;
-    min-width: 390px;
+    width: 350px;
     height: 500px;
     z-index: 1;
     padding: 10px;
