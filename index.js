@@ -789,14 +789,14 @@ const e6 = {
 }
 const e7 = {
     questions: [
-        "I often procrastinate but rarely I am extremely productive.",
+        "I often procrastinate, but rarely I am extremely productive.",
         "I value freedom.",
         "I have commitment issues.", 
-        "I am want to try everything to have a better chance to find the ideal thing.", 
-        "I am often imatient.", 
+        "I want to try everything to have a better chance to find the ideal thing.", 
+        "I am often impatient.", 
         "I have questionable coping mechanisms.", 
         "I am scared of missing out on things.", 
-        "I avoid pain and being hung up on negative things."],
+        "I avoid pain and dwelling on negative things."],
     score: 0,
     label: "e7",
     name: "7"
