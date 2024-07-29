@@ -914,9 +914,9 @@ $("#enneagramTest .submit").on("click", function(){
     e7.score = calculateScore(e7.label);
     e8.score = calculateScore(e8.label);
     e9.score = calculateScore(e9.label);
-    
+    var enneagramscoress = [e1.score / 8, e2.score / 8, e3.score / 8, e4.score / 8, e5.score / 8, e6.score / 8, e7.score / 8, e8.score / 8, e9.score / 8];
 
-    var enneagramScores = [e1.score / 8, e2.score / 8, e3.score / 8, e4.score / 8, e5.score / 8, e6.score / 8, e7.score / 8, e8.score / 8, e9.score / 8];
+    const enneagramScores = [e1.score / 8, e2.score / 8, e3.score / 8, e4.score / 8, e5.score / 8, e6.score / 8, e7.score / 8, e8.score / 8, e9.score / 8];
     var enneagramLabels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     const data = {
         labels: ['Enneagram 1', 'Enneagram 2', 'Enneagram 3', 'Enneagram 4', 'Enneagram 5', 'Enneagram 6', 'Enneagram 7', 'Enneagram 8', 'Enneagram 9'],
@@ -927,7 +927,7 @@ $("#enneagramTest .submit").on("click", function(){
             hoverOffset: 20
         }]
     };
-    sort(enneagramScores, enneagramLabels);
+    sort(enneagramscoress, enneagramLabels);
 
     // Calculate the wing
     var wing = "";
