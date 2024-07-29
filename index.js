@@ -160,80 +160,7 @@ const Fiq = [
 ];
 
 
-const openness = {
-    high: [
-        "I am very creative.",
-        "I am excited to try out new experiences.",
-        "I am good at tackling new challenges.",
-        "I enjoy contemplating abstract concepts."],
-    low: [
-        "I dislike change.",
-        "I do not enjoy exploring multiple options.",
-        "I am not very imaginative.",
-        "I hate thinking about intangible things."],
-    highscore: 0,
-    lowscore: 0
-};
 
-const conscient = {
-    high: [
-        "I put much effort into planning.",
-        "I finish important tasks right away.",
-        "I prefer having a schedule.",
-        "I pay attention to detail."],
-    low: [
-        "I am clumsy.",
-        "I am bad at organizing things.",
-        "I often procrastinate.",
-        "I often forget assigned tasks or due dates."],
-    highscore: 0,
-    lowscore: 0
-};
-
-const extraversion = {
-    high: [
-        "I enjoy being the center of attention.",
-        "I am good at starting conversations.",
-        "I have a wide social circle.",
-        "I say things without really thinking about them."],
-    low: [
-        "I prefer solitude.",
-        "I get exhausted easily when socializing.",
-        "I find it challenging to maintain small talk.",
-        "I am often awkward."],
-    highscore: 0,
-    lowscore: 0
-};
-
-const agreeable = {
-    high: [
-        "I care about people around me.",
-        "I am very empathetic.",
-        "I find it fulfilling to help others.",
-        "I am a people pleaser."],
-    low: [
-        "I have little interest in others.",
-        "I disregard other's emotions.",
-        "I have no problem with confrontation.",
-        "I have no problem belittling others."],
-    highscore: 0,
-    lowscore: 0
-};
-
-const neurotic = {
-    high: [
-        "I am often stressed.",
-        "I am often overwhelmed by many things.",
-        "I am sensitive.",
-        "I struggle to bounce back after stressfule events."],
-    low: [
-        "I am emotionally healthy.",
-        "I rarely feel sad/depressed.",
-        "I am often relaxed",
-        "I have healthy coping mechanisms."],
-    highscore: 0,
-    lowscore: 0
-};
 
 const ni = {
     questions: Niq,
@@ -337,7 +264,7 @@ $("#mbtiTest .next").on("click", function(){
         $(".page").hide();
         $("#page" +pageNumberMbti).show();
         if(pageNumberMbti == 8){
-            $(".submit").show();
+            $("#mbtiTest .submit").show();
         }
     }
     $("#mbtiTest .numbers").text(pageNumberMbti + "/8");
@@ -787,33 +714,6 @@ const e1 = {
         "I always justify my behavior."],
     score: 0,
     label: "e1",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "1"
 }
 const e2 = {
@@ -828,33 +728,6 @@ const e2 = {
         "I emphasize with people easily."],
     score: 0,
     label: "e2",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "2"
 }
 const e3 = {
@@ -869,33 +742,6 @@ const e3 = {
         "I must be the best, not just 'good'."],
     score: 0,
     label: "e3",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "3"
 }
 const e4 = {
@@ -910,33 +756,6 @@ const e4 = {
         "'I wont be chosen if I am not unique'."],
     score: 0,
     label: "e4",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "4"
 }
 const e5 = {
@@ -952,33 +771,6 @@ const e5 = {
 
     score: 0,
     label: "e5",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "5"
 }
 const e6 = {
@@ -993,33 +785,6 @@ const e6 = {
         "I often ignore my instincts."],
     score: 0,
     label: "e6",
-    so: [
-        "I am often anxious.",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "6"
 }
 const e7 = {
@@ -1034,33 +799,6 @@ const e7 = {
         "I avoid pain and being hung up on negative things."],
     score: 0,
     label: "e7",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "7"
     
 }
@@ -1076,33 +814,6 @@ const e8 = {
         "I am afraid of being vulnerable."],
     score: 0,
     label: "e8",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "8"
 }
 const e9 = {
@@ -1117,33 +828,6 @@ const e9 = {
         "I deny the bad parts of life."],
     score: 0,
     label: "e9",
-    so: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sp: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
-    sx: [
-        "hello",
-        "my nigga",
-        "how are you", 
-        "my nigga", 
-        "good to see you", 
-        "my nigga", 
-        "goodbye", 
-        "my nigga"],
     name: "9"
 }
 
@@ -1199,7 +883,7 @@ $("#enneagramTest .next").on("click", function(){
         $(".page").hide();
         $("#Epage" +pageNumberEnneagram).show();
         if(pageNumberEnneagram == 9){
-            $(".submit").show();
+            $("#enneagramTest .submit").show();
         }
     }
     $("#enneagramTest .numbers").text(pageNumberEnneagram + "/9");
@@ -1230,7 +914,7 @@ $("#enneagramTest .submit").on("click", function(){
     e7.score = calculateScore(e7.label);
     e8.score = calculateScore(e8.label);
     e9.score = calculateScore(e9.label);
-
+    $("#Epage1").show();
     
 
     var enneagramScores = [e1.score / 8, e2.score / 8, e3.score / 8, e4.score / 8, e5.score / 8, e6.score / 8, e7.score / 8, e8.score / 8, e9.score / 8];
@@ -1270,48 +954,12 @@ $("#enneagramTest .submit").on("click", function(){
     };
     
     // Custom plugin for variable radii pie chart
-    const variableRadiusPlugin = {
-        id: 'variableRadiusPlugin',
-        beforeDatasetsDraw(chart) {
-            const {ctx, chartArea: {top, bottom, left, right, width, height}, data} = chart;
-            const centerX = (left + right) / 2;
-            const centerY = (top + bottom) / 2;
-            const totalSectors = data.datasets[0].data.length;
-            const angle = 2 * Math.PI / totalSectors;
-    
-            ctx.save();
-            for (let i = 0; i < totalSectors; i++) {
-                const startAngle = i * angle - Math.PI / 2;
-                const endAngle = startAngle + angle;
-                const radius = data.datasets[0].data[i]; // Scale radius for visibility
-    
-                ctx.beginPath();
-                ctx.moveTo(centerX, centerY);
-                ctx.arc(centerX, centerY, radius, startAngle, endAngle);
-                ctx.lineTo(centerX, centerY);
-                ctx.fillStyle = chart.data.datasets[0].backgroundColor[i];
-                ctx.fill();
-                ctx.stroke();
-            }
-            ctx.restore();
-    
-            return false; // Prevent Chart.js from drawing the dataset
-        }
-    };
-    
-    // Register the custom plugin
-    Chart.register(variableRadiusPlugin);
-    
-    // Configuration for the pie chart
     const config = {
-        type: 'doughnut', // Use 'doughnut' to create the outer ring and then use the plugin for custom drawing
+        type: 'polarArea',
         data: data,
         options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            aspectRatio: 1, // Maintain a 1:1 aspect ratio
             plugins: {
-                variableRadiusPlugin: true, // Enable the custom plugin
+                label: false,
                 title: {
                     display: true,
                     text: `Your Enneagram Type Is: ${enneagramLabels[0]}w${wing}`,
@@ -1324,19 +972,11 @@ $("#enneagramTest .submit").on("click", function(){
                         top: 20,
                         bottom: 20
                     }
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(tooltipItem) {
-                            const index = tooltipItem.dataIndex;
-                            const score = data.datasets[0].data[index];
-                            return `   ${score}%`; // Add the percentage symbol here
-                        }
-                    }
                 }
             }
         }
     };
+
     var head = {
         score: [e5.score, e6.score, e7.score],
         name: [e5.name, e6.name, e7.name]
@@ -1381,4 +1021,260 @@ $("#enneagramTest .submit").on("click", function(){
 $(".first-page").show();
 $(".last-page").hide();
 $("#Epage1").show();
-$("#page1").show();;
+$("#page1").show();
+
+var openness = {
+    questions: [[
+        "I am very creative.",
+        "I am excited to try out new experiences.",
+        "I am good at tackling new challenges.",
+        "I enjoy contemplating abstract concepts."],[
+        "I dislike change.",
+        "I do not enjoy exploring multiple options.",
+        "I am not very imaginative.",
+        "I hate thinking about intangible things."]],
+    highscore: 0,
+    lowscore: 0,
+    label: "o"
+};
+
+var conscient = {
+    questions: [[
+        "I put much effort into planning.",
+        "I finish important tasks right away.",
+        "I prefer having a schedule.",
+        "I pay attention to detail."],[
+        "I am clumsy.",
+        "I am bad at organizing things.",
+        "I often procrastinate.",
+        "I often forget assigned tasks or due dates."]],
+    highscore: 0,
+    lowscore: 0,
+    label: "c"
+};
+
+var extraversion = {
+    questions: [[
+        "I enjoy being the center of attention.",
+        "I am good at starting conversations.",
+        "I have a wide social circle.",
+        "I say things without really thinking about them."],[
+        "I prefer solitude.",
+        "I get exhausted easily when socializing.",
+        "I find it challenging to maintain small talk.",
+        "I am often awkward."]],
+    highscore: 0,
+    lowscore: 0,
+    label: "e"
+};
+
+var agreeable = {
+    questions: [[
+        "I care about people around me.",
+        "I am very empathetic.",
+        "I find it fulfilling to help others.",
+        "I am a people pleaser."],[
+        "I have little interest in others.",
+        "I disregard other's emotions.",
+        "I have no problem with confrontation.",
+        "I have no problem belittling others."]],
+    highscore: 0,
+    lowscore: 0,
+    label: "a"
+};
+
+var neurotic = {
+    questions: [[
+        "I am often stressed.",
+        "I am often overwhelmed by many things.",
+        "I am sensitive.",
+        "I struggle to bounce back after stressfule events."],[
+        "I am emotionally healthy.",
+        "I rarely feel sad/depressed.",
+        "I am often relaxed",
+        "I have healthy coping mechanisms."]],
+    highscore: 0,
+    lowscore: 0,
+    label: "n"
+};
+
+var pageNumBig5 = 1;
+
+function createQuestionsBig5(object) {
+    var page = $("<div></div>"); // Create a new div element
+    page.attr("id", "Bpage" + pageNumBig5); // Set the ID using jQuery attr method
+    $("#big5Test .pages").append(page); // Append the new page to the container
+    pageNumBig5++;
+    page.addClass("page");
+    var rand = randNumsArray(object.questions[0].length);
+    for (var i = 0; i < 2; i++) {
+        if(i == 0){
+            var scorename = "high";
+
+        }else{
+            var scorename = "low";
+        }
+        for(var j = 0; j < 4; j++){
+            var questionbig5 = $("<div></div>"); // Create a new div for the question container
+            questionbig5.addClass("question-container"); // Add class using jQuery addClass method
+            questionbig5.addClass(object.label + "page"); // Add additional class
+            page.append(questionbig5); // Append the question container to the page
+
+            var question = $("<h4></h4>"); // Create a new h3 element
+            // Get an array of random indices
+            question.text(object.questions[i][rand[j]]); // Set the text of the question using jQuery text method
+            question.addClass("question");
+            questionbig5.append(question); // Append the question to the question container
+            var inputDiv = $(`<div class = 'inputDiv'><h5>Not At All Relatable</h5><input class = '${scorename + object.label}' type = 'range' min = '0' max = '100' value='50'><h5>Very Relatable</h5></div>`);
+            questionbig5.append(inputDiv);
+        }
+    }
+}
+
+createQuestionsBig5(openness);
+createQuestionsBig5(conscient);
+createQuestionsBig5(extraversion);
+createQuestionsBig5(agreeable);
+createQuestionsBig5(neurotic);
+var pageNumberBig5 = 1;
+$(".page").hide();
+$("#Bpage1").show();
+
+$("#big5Test .numbers").text(pageNumberBig5 + "/5");
+
+$("#big5Test .next").on("click", function(){
+    if(pageNumberBig5 == 5){
+        $(".end").removeClass("hidden-warning");
+        $(".closewarning").one("click", function(){
+            $(".end").addClass("hidden-warning");
+        });
+    }else{
+        pageNumberBig5++;
+        $("#big5Test .page").hide();
+        $("#Bpage" +pageNumberBig5).show();
+        if(pageNumberBig5 == 5){
+            $(".submit").show();
+        }
+    }
+    $("#big5Test .numbers").text(pageNumberBig5 + "/5");
+});
+
+$("#big5Test .previous").on("click", function(){
+    if(pageNumberBig5 == 1){
+        $(".start").removeClass("hidden-warning");
+        $(".closewarning").one("click", function(){
+            $(".start").addClass("hidden-warning");
+        });
+    }else{
+        pageNumberBig5--;
+        $(".page").hide();
+        $("#Bpage"  +pageNumberBig5).show();
+    }
+    $("#big5Test .numbers").text(pageNumberBig5 + "/9");
+});
+
+$("#big5Test .submit").on("click", function(){
+    openness.highscore = calculateScore("higho");
+    neurotic.highscore = calculateScore("highn");
+    conscient.highscore = calculateScore("highc");
+    extraversion.highscore = calculateScore("highe");
+    agreeable.highscore = calculateScore("higha");
+    openness.lowscore = calculateScore("lowo");
+    neurotic.lowscore = calculateScore("lown");
+    conscient.lowscore = calculateScore("lowc");
+    extraversion.lowscore = calculateScore("lowe");
+    agreeable.lowscore = calculateScore("lowa");
+    oScore = (openness.highscore - openness.lowscore + 400)/8;
+    cScore = (conscient.highscore - conscient.lowscore + 400)/8;
+    eScore = (extraversion.highscore - extraversion.lowscore + 400)/8;
+    aScore = (agreeable.highscore - agreeable.lowscore + 400 )/8;
+    nScore = (neurotic.highscore - neurotic.lowscore + 400)/8;
+    const labels = ["Oppenness", "conscientiossness", "Extraversion", "Agreeableness", "Neuroticism"];
+    const data = {
+        labels: labels,
+        datasets: [{
+            data: [oScore, cScore, eScore, aScore, nScore],
+            backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1,
+            label: false
+        }]
+    };
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            plugins: {
+                label: "",
+                title: {
+                    display: true,
+                    text: 'Your Big 5 (OCEAN) Scores',
+                    font: {
+                        size: 18,
+                        family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+                        weight: 'bold',
+                    },
+                    padding: {
+                        top: 20,
+                        bottom: 20
+                    }
+                },
+                legend: {
+                    display: false
+                }
+            },
+            animations: {
+              tension: {
+                duration: 1000,
+                easing: 'linear',
+                from: 1,
+                to: 0,
+                loop: true
+              }
+            },
+            scales: {
+              y: { // defining min and max so hiding the dataset does not change scale range
+                min: 0,
+                max: 100,
+                beginAtZero: true,
+                grid: {
+                    offset: true
+                }
+              }
+            }
+        }
+    };
+    
+    // Render the chart
+    var resultsDiv = document.querySelector("#big5Test .results");
+    resultsDiv.innerHTML = `<canvas id="barChartBig5"></canvas>`;
+    
+    const ctx = document.getElementById('barChartBig5').getContext('2d');
+    new Chart(ctx, config);
+
+    $("#big5Test .first-page").hide();
+    $("#big5Test .last-page").show();
+
+    $("#big5Test .backToQuestions").on("click", function(){
+        $("#big5Test .first-page").show();
+        $("#big5Test .last-page").hide();
+    });
+});
+$("#Epage1").show();
+$("#page1").show();
