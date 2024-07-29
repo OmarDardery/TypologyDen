@@ -914,11 +914,19 @@ $("#enneagramTest .submit").on("click", function(){
     e7.score = calculateScore(e7.label);
     e8.score = calculateScore(e8.label);
     e9.score = calculateScore(e9.label);
-    $("#Epage1").show();
     
 
     var enneagramScores = [e1.score / 8, e2.score / 8, e3.score / 8, e4.score / 8, e5.score / 8, e6.score / 8, e7.score / 8, e8.score / 8, e9.score / 8];
     var enneagramLabels = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const data = {
+        labels: ['Enneagram 1', 'Enneagram 2', 'Enneagram 3', 'Enneagram 4', 'Enneagram 5', 'Enneagram 6', 'Enneagram 7', 'Enneagram 8', 'Enneagram 9'],
+        datasets: [{
+            data: enneagramScores,
+            backgroundColor: ['#80af81', '#405d72','#7c00fe','#1a5319' , '#bc9f8b', '#e68369', '#ef5a6f', '#ffc700', '#c80036'],
+            borderColor: '#d3d3d3',
+            hoverOffset: 20
+        }]
+    };
     sort(enneagramScores, enneagramLabels);
 
     // Calculate the wing
@@ -943,15 +951,7 @@ $("#enneagramTest .submit").on("click", function(){
     }
 
     // Define the data for the chart
-    const data = {
-        labels: ['Enneagram 1', 'Enneagram 2', 'Enneagram 3', 'Enneagram 4', 'Enneagram 5', 'Enneagram 6', 'Enneagram 7', 'Enneagram 8', 'Enneagram 9'],
-        datasets: [{
-            data: enneagramScores,
-            backgroundColor: ['#80af81', '#405d72','#7c00fe','#1a5319' , '#bc9f8b', '#e68369', '#ef5a6f', '#ffc700', '#c80036'],
-            borderColor: '#d3d3d3',
-            hoverOffset: 20
-        }]
-    };
+    
     
     // Custom plugin for variable radii pie chart
     const config = {
