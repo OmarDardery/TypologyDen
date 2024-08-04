@@ -325,7 +325,7 @@ $("#mbtiTest .submit").on("click", function(){
     fi.score = calculateScore(fi.label);
     te.score = calculateScore(te.label);
     ti.score = calculateScore(ti.label);
-    var totalScoresArray = [ni.score, ne.score, si.score, se.score, te.score, ti.score, fe.score, fi.score];
+    var totalScoresArray = [ni.score/10, ne.score/10, si.score/10, se.score/10, te.score/10, ti.score/10, fe.score/10, fi.score/10];
     arrayN = ["ni", "ne", "si", "se", "te", "ti", "fe", "fi"];
     sort(totalScoresArray, arrayN);
     var domF1 = arrayN[0];
@@ -337,7 +337,7 @@ $("#mbtiTest .submit").on("click", function(){
     var auxf2 = "";
     var domF3 = arrayN[2];
     var auxf3 = "";
-
+    
     if(domF1 == "te"){
         for (var i = 0; i < 8; i++){
             if(arrayN[i].includes("ni")){
@@ -656,7 +656,7 @@ $("#mbtiTest .submit").on("click", function(){
             }
         }
     }
-
+    const capitalizedStrings = arrayN.map(str => str.charAt(0).toUpperCase() + str.slice(1) + " score");
 
 
     var resultsDiv = document.querySelector("#mbtiTest .results");
@@ -667,19 +667,37 @@ $("#mbtiTest .submit").on("click", function(){
         <h2>2.  ${mbti2}</h2>
         <h2>3.  ${mbti3}</h2>
         </div>
-        <div class="top3f">
-        <h4>${domF1} Score: ${totalScoresArray[0]/10}%</h4>
-        <h4>${domF2} Score: ${totalScoresArray[1]/10}%</h4>
-
+        <div>
+        <canvas id='cogFComparison' style="z-index: 100"></canvas>
         </div>
-        <h4 class="thirdF">${domF3} Score: ${totalScoresArray[2]/10}%</h4>
-        <h4 class="fourthF">${arrayN[3]} Score: ${totalScoresArray[3]/10}%</h4>
-        <h4 class="fifthF">${arrayN[4]} Score: ${totalScoresArray[4]/10}%</h4>
-        <h4 class="sixthF">${arrayN[5]} Score: ${totalScoresArray[5]/10}%</h4>
-        <h4 class="seventhF" >${arrayN[6]} Score: ${totalScoresArray[6]/10}%</h4>
-        <h4 class="eightthF">${arrayN[7]} Score: ${totalScoresArray[7]/10}%</h4>
     `;
-
+    const data = {
+        labels: capitalizedStrings,
+        datasets: [{
+            data: totalScoresArray,
+            backgroundColor: ['#80af81', '#405d72','#7c00fe','#1a5319' , '#bc9f8b', '#e68369', '#ef5a6f', '#ffc700'],
+            borderColor: '#d3d3d3',
+            hoverOffset: 20
+        }]
+    };
+    const config = {
+        type: 'polarArea',
+        data: data,
+        options: {
+            plugins: {
+                label: false,
+                title: {
+                    display: false
+                },
+                    padding: {
+                        top: 20,
+                        bottom: 20
+                }
+            }
+        }
+    };
+    const ctx = document.getElementById('cogFComparison').getContext('2d');
+    new Chart(ctx, config);
     $("#mbtiTest .first-page").hide();
     $("#mbtiTest .last-page").show();
 });

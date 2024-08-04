@@ -289,9 +289,6 @@ body{
     border-radius: 20px;
 }
 .show-results{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 0.1fr 0.5fr 0.5fr 0.5fr;
     gap: 10px;
     text-align: center;
     width: 90%;
@@ -312,39 +309,6 @@ body{
     margin-top: 10px;
     align-self: flex-end;
     z-index: 3;
-}
-.top3{
-    grid-area: 1 / 1 / 5 / 5;
-    text-align: left;
-}
-
-.top3f{
-    grid-area: 1 / 5 / 4 / 7;
-    text-align: left;
-}
-
-.thirdF{
-    grid-area: 5 / 3 / 6 / 5;
-}
-
-.fourthF{
-    grid-area: 6 / 2 / 7 / 4;
-}
-
-.fifthF{
-    grid-area: 6 / 4 / 7 / 6;
-}
-
-.sixthF{
-    grid-area: 7 / 1 / 8 / 3;
-}
-
-.seventhF{
-    grid-area: 7 / 3 / 8 / 5;
-}
-
-.eightthF{
-    grid-area: 7 / 5 / 8 / 7;
 }
 .page-nav-item{
     z-index: 1;
