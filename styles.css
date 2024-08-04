@@ -287,6 +287,7 @@ body{
     background-color: #d3d3d3;
     padding: 10px;
     border-radius: 20px;
+    z-index: 1;
 }
 .show-results{
     gap: 10px;
@@ -335,7 +336,6 @@ body{
     max-height: 800px;
     width: 100%;
     max-width: 400px;
-    min-width: 390px;
     z-index: 1;
     padding: 10px;
     
