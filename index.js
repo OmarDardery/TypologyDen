@@ -101,7 +101,7 @@ function returnHome(){
     $(".test-name").show();
     $(".body-container").show();
     $(".test-container").hide();
-    
+    $(".explanation").hide();
 }
 //the code below is for loading the home of the site.
 
