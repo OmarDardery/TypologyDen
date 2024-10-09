@@ -36,24 +36,86 @@ menuButton.on("click", function() {
         });
     }
 });
+$(".menu-li").on("click", function(){
+    menuButton.toggleClass("rotated");
+    menu.toggleClass("hidden-menu");
+
+    if (opacity.hasClass("hidden")) {
+        opacity.removeClass("hidden");
+        void opacity[0].offsetWidth; // Trigger a reflow
+
+        opacity.addClass("opacityy");
+        opacity.one("click", function() {
+            opacity.removeClass("opacityy");
+            opacity.one("transitionend", function() {
+                opacity.addClass("hidden");
+            });
+            menuButton.toggleClass("rotated");
+            menu.toggleClass("hidden-menu");
+        });
+    } else {
+        opacity.removeClass("opacityy");
+        opacity.one("transitionend", function() {
+            opacity.addClass("hidden");
+        });
+        opacity.one("click", function() {
+            opacity.removeClass("opacityy");
+            opacity.one("transitionend", function() {
+                opacity.addClass("hidden");
+            });
+            menuButton.toggleClass("rotated");
+            menu.toggleClass("hidden-menu");
+        });
+    }
+    closeTestNames();
+});
+function closeTestNames(){
+    $(".test-name").hide();
+    $(".body-container").hide();
+}
+
+$()
 // the part above is for the menu functionality
 // the part below is for loading tests
 function loadTest(testName){
     $(".test-name").hide();
     $(".body-container").hide();
-    $("#" + testName + "Test").removeClass("hidden");
+    $("#" + testName + "Test").show();
 }
 
-$(".test-name").on("click", function(){
-    loadTest($(this).attr("id"));
+$(".test-name, .quiz-link").on("click", function(){
+    returnHome();
+    closeExplanation();
+    closeTestNames();
+    loadTest($(this).attr("data-value"));
 });
 
+function closeTest(){
+    $(".test-container").hide();
+    
+}
+function closeExplanation(){
+    $(".explanation").hide();
+}
+function returnHome(){
+    $(".test-name").show();
+    $(".body-container").show();
+    $(".test-container").hide();
+    
+}
 //the code below is for loading the home of the site.
 
 $(".homeButton").on("click", function(){
-    window.location.reload();
+    closeTest();
+    returnHome();
 });
-
+$(".explanation-link").on("click", function(){
+    returnHome();
+    closeTest();
+    closeTestNames();
+    closeExplanation();
+    $("#" + $(this).attr("data-value") + "Explanation").show();
+});
 // the code below is for atoring all questions
 
 const Niq = [
@@ -160,7 +222,7 @@ const Fiq = [
 ];
 
 
-
+$(".explanation").hide();
 
 const ni = {
     questions: Niq,

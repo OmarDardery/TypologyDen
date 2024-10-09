@@ -15,8 +15,8 @@
             <button class="menubutton" style="border-radius: 50%; font-size: 30px; padding: 5px; width: 50px; background-color: #ff204e; color: rgb(0, 0, 0); z-index: 7;">☰</button>
         </div>
         <div class="title">
-            <div class="nav">
-                <button class="npaque" style="border-radius: 50%; font-size: 30px; padding: 5px; width: 50px; background-color: #ff204e; color: rgb(0, 0, 0); z-index: 3; display: flex; justify-content: center; align-items: center;">☰</button>
+            <div class="nav hehehe">
+                
             </div>
             <div style="display: flex; flex-direction: column; gap: 0px; width: 100%;">
                 <h1 class="name homeButton" style="color: #f8eded; font-family: serif;">Typology Den</h1>
@@ -34,28 +34,43 @@
         <div class="menu npaque hidden-menu">
             <div style="top: 0; margin-left: 70px; color: aliceblue; margin-right: 3px">
                 <h2 style="margin-top: 10px; font-family: serif;">Typology Den:</h2>
-                <h3 style="margin-top: 0px;">Where you go to get typed.</h3>
+                <h3 id="where" style="margin-top: 0px;">Where you go to get typed.</h3>
             </div>
             <hr style="width: 100%;"/>
+            <h2><span style="color: rgb(205, 28, 205);">M</span><span style="color: orange;">B</span><span style="color: cyan;">T</span><span style="color: rgb(71, 228, 71);">I</span></h2>
+            <ul style="word-spacing: normal;">
+                <li class="explanation-link menu-li" data-value="mbti" style="margin: 6px;">Understand how it works</li>
+                <li class="quiz-link menu-li" data-value="mbti" style="margin: 6px;">Take the <span style="color: rgb(205, 28, 205);">M</span><span style="color: orange;">B</span><span style="color: cyan;">T</span><span style="color: rgb(71, 228, 71);">I</span> test</li>
+            </ul>
+            <h2>Enneagram</h2>
+            <ul style="word-spacing: normal;">
+                <li class="explanation-link menu-li" data-value="enneagram" style="margin: 6px;"><a>Understand how it works</a></li>
+                <li class="quiz-link menu-li" data-value="enneagram" style="margin: 6px;">Take the Enneagram Test</li>
+            </ul>
+            <h2>Big 5</h2>
+            <ul style="word-spacing: normal;">
+                <li class="explanation-link menu-li" data-value="big5" style="margin: 6px;"><a>Understand how it works</a></li>
+                <li class="quiz-link menu-li" data-value="big5" style="margin: 6px;">Take the Big 5 Test</li>
+            </ul>
         </div>
 
 
         <div id="body-container">
 
-                <div id="mbti" class="test-name toppp">
+                <div data-value="mbti" class="test-name toppp">
                     <h2>Take the <span style="color: rgb(205, 28, 205);">M</span><span style="color: orange;">B</span><span style="color: cyan;">T</span><span style="color: rgb(71, 228, 71);">I</span> test</h2>
                     
                 </div>
 
 
-                <div id="enneagram" class="test-name toppp">
+                <div data-value="enneagram" class="test-name toppp">
                     <h2>Take the Enneagram test</h2>
                     
                 </div>
 
 
 
-                <div id="big5" class="test-name toppp">
+                <div data-value="big5" class="test-name toppp">
                     <h2>Take the Big 5 test</h2>
                     
                 </div>
@@ -154,11 +169,237 @@
                     </button>
                 </div>
             </div>
-
-
         <div class="bottomPart" style="width: 100%;  bottom: 0;">
 
         </div>
+        <div class="explanation" id="mbtiExplanation">
+        The Myers and Briggs personality system is more complex than it appears at first glance. Beyond the basic four-letter structure, the overall framework of the MBTI® assessment includes eight cognitive functions, which reveal how your mind works and how you relate to the world at large. They guide your interactions with others and your environment. They also explain how your belief systems emerge and how they influence your thinking and behavior.
+
+The cognitive functions are a useful tool for revealing the dynamic qualities of personality, translated into the actual practice of living in the real world.
+<h2>The Cognitive Functions in theory and practice</h2>
+The starting point is Carl Jung’s theory of cognitive functions. He identified four of them, which he labeled as sensation, intuition, thinking, and feeling. He asserted that everyone would have both a primary function and a supporting or auxiliary function and that understanding each would reveal the secrets of how each person absorbed and processed information and used it to evaluate options and make decisions.
+
+
+Using Jung’s ideas as a template, Isabel Briggs Myers modified the Myers and Briggs personality typing system to include eight cognitive functions — twice as many as Jung identified.  She kept Jung’s initial four functions (identified by the letters S, N, T, and F in the Myers-Briggs typing system), but added ‘extraverted’ and ‘introverted’ options for each (signified by ‘e’ or ‘i’ in lower case).
+
+So an ENFJ, to give one example, would have an extraverted Feeling function (Fe) and an introverted Intuition function (Ni). Conversely, an INFP would have an introverted Feeling function (Fi) and an extraverted Intuition function (Ne).
+
+To clarify: extraverted or introverted in this case do not refer to how outgoing someone is (or isn’t). Instead, they relate to the outward or inward focus of each function. Extraverted functions express themselves through an immersion in the external world, while introverted functions are defined by a process of inner self-reflection. More on that in a moment. 
+
+<h3>How this interacts with the four-letter personality code</h3>
+Isabel Briggs Myers kept the idea of a dominant (primary) and auxiliary (supporting) function as an essential element of her system. But she gave those concepts more depth and context, through two added stipulations:
+<ol>
+<li>For each person, their personality would determine the identity of the dominant function. In practice, this means that an Introvert will always have an introverted dominant function, while an Extravert will always have an extraverted dominant function.
+</li>
+<li>
+The cognitive functions divide into perceiving and judging categories. The perceiving functions (Sensing and Intuition) explain how people receive and absorb information, while the judging functions (Thinking and Feeling) explain how they make decisions.
+</li></ol>
+Each person has one cognitive function for both the perceiving and judging categories, since both processes are required for human thinking and behavior. But Judgers will always have an extraverted-Judging function, while Perceivers will always have an extraverted-Perceiving function.
+
+
+Whether or not that function is dominant depends on whether a person is an Extravert or an Introvert. Extraverted Perceivers will have a dominant perceiving function, but the perceiving function will fill an auxiliary role in Introverted Perceivers. Likewise, Extraverted Judgers will have a dominant judging function, while Introverted Judgers will have an auxiliary judging function.
+
+All of this might sound complicated. But that’s only because people are complicated. The good news is that once you’ve decoded your personality type and identified your cognitive functions, you’ll possess valuable insights that can help you do a deep dive into your own psyche.
+
+<h3>Who am I, Really? Introducing the Eight Cognitive Functions</h3>
+Once you know your four-letter personality type, you’ll automatically know your cognitive functions, since this system of analysis has a fixed structure.
+
+
+Here are quick summaries of the main personality characteristics you can expect to demonstrate, depending on the identity of your dominant and auxiliary (supporting) cognitive traits:
+
+<h4>Extraverted Sensing (Se)</h4>
+People with the extraverted Sensing function rely on their five senses to absorb as much information about their environment as they can. They are highly observant and sensitive, and notice details about what is happening around them that other people miss. They tend to be very focused on the here-and-now, preferring to live in the moment rather than thinking about what might happen next week, next month, or next year.
+
+Extraverted sensing is the dominant cognitive function in ESTPs and ESFPs, and the auxiliary function in ISTPs and ISFPs.
+
+<h4>Introverted Sensing (Si)</h4>
+Those who have an introverted Sensing function relate past experiences to present circumstances. Sensory input (sight, sound, touch, smell, taste) is used as a frame of reference to build ideas about how the world is and how it works, which leads to strongly patterned ways of acting and responding. Men and women with an introverted sensing function are highly organized, thrive on routine, and have wonderful memories.
+
+
+ISTJs and ISFJs have introverted sensing as their dominant cognitive function, while ESTJs and ESFJs feature it as their auxiliary function.
+
+<h4>Extraverted Intuition (Ne)</h4>
+People with extraverted Intuition see patterns everywhere. They notice connections between things, people, and events that others miss. Their intellects are speculative and creative, and they’re always trying to come up with new and more inclusive ideas that capture reality more fully and comprehensively. Individuals with extraverted intuition are excellent speakers and communicators who know how to carry others along with them on their imaginative excursions.
+
+ENTPs and ENFPs have extraverted intuition as their dominant cognitive function, while INFPs and INTPs have it as an auxiliary function.
+
+<h4>Introverted Intuition (Ni)</h4>
+Those who possess introverted Intuition rely on their instincts to guide them through life. If you ask them to explain their conclusions or behavior, they often wouldn’t be able to do so logically or rationally. They are the go-with-the-flow type, content to let their subconscious minds steer them in the proper direction. They are focused inward, exploring their own minds for guidance, and very much oriented toward the future rather than the immediate moment.
+
+INTJs and INFJs have introverted intuition as their dominant cognitive function, while ENFJs and ENTJs have it as their auxiliary function.
+
+<h4>Extraverted Thinking (Te)</h4>
+Of all the cognitive functions, extraverted Thinking is most closely associated with the relentless use of logic and reason. Emotions are set aside, and judgments are made entirely based on what seems reasonable and rational. People with extraverted thinking functions know how to compartmentalize their emotions as they make their decisions, so they don’t distort the thinking process. They are verbally adept and highly persuasive, showing the capacity to create tightly structured arguments that impress most listeners.
+
+
+ENTJs and ESTJs have extraverted thinking as their dominant cognitive function, while INTJs and ISTJs possess it in its auxiliary form.
+
+<h4>Introverted Thinking (Ti)</h4>
+Those who have an introverted Thinking function are deeply analytical and logical. Their frames of reference come from their internally held belief systems, which are carefully constructed based on past insights and discoveries. They expect reality to conform to their already existing ideas, although if there are persistent conflicts they will adjust their thinking gradually over time. They reflect on everything happening around them and are reluctant to let anything go until they’re sure they understand.
+
+INTPs and ISTPs have introverted thinking as their dominant cognitive function, while ENTPs and ESTPs have introverted thinking as their auxiliary function.
+
+<h4>Extraverted Feeling (Fe)</h4>
+Men and women with extraverted Feeling functions base their decisions on their values, which are determined through their interactions with other people and their assessments of others’ needs. Their value systems are heavily influenced by cultural and societal norms, which reveals the outward focus of their feeling function. People in this category are sensitive and empathic and will go to great lengths to help other people in any way they can.
+
+ENFJs and ESFJs have extraverted feeling as their dominant cognitive function, while INFJs and ISFJs have is as their auxiliary function.
+
+<h4>Introverted Feeling (Fi)</h4>
+Individuals who possess introverted Feeling as a cognitive function are the most empathetic of all types. They can feel others’ pain and unhappiness as if it were their own, and they will act to relieve that pain and unhappiness if they can. Their value systems mean everything to them, and they adopt their ethics based on their own assessments rather than the opinions of others. They will do what seems right to them, regardless of prevailing cultural or societal standards.
+
+
+INFPs and ISFPs have introverted feeling as their dominant function, while ENFPs and ESFPs have it as an auxiliary function.
+<div style="width: 100%; display: flex; justify-content: center;margin: 10px;"><img style="width: 80%; max-width: 400px;" src="https://i.pinimg.com/474x/47/88/57/478857a23329a8871abf0d0415015658.jpg"></div>
+The Seven Principles of Cognitive Function Theory, Reviewed
+The Myers-Briggs cognitive function concept can be summed up by the following seven principles:
+<ol>
+<Li>There are eight cognitive functions, divided into four types that can be Extraverted or Introverted: Sensing, Intuition, Thinking, and Feeling.
+</Li> 
+<Li>Sensing and Intuition are perceiving functions (relating to how you absorb and process information), while Thinking and Feeling are judging functions (relating to how you make decisions).
+</Li> 
+<li>Each individual will have two cognitive functions, one from the perceiving category and one from the judging category.
+</li> 
+<li>Each person will have a dominant and auxiliary (supporting) cognitive function.
+</li> 
+<li>These dominant and auxiliary functions will be extraverted in one instance and introverted in the other.
+</li> 
+
+<li>Judgers will have an extraverted Thinking or Feeling function, while perceivers will have an extraverted Sensing or Intuition function.
+</li> 
+<li>In Extraverted people, the dominant cognitive function will be extraverted.
+</li> 
+<li>In Introverted people, the dominant cognitive function will be introverted.
+</li> </ol>
+Once you have a handle on these principles, you’ll understand the impact of cognitive functions on human thinking and behavior in general. When you know your personality type, you’ll understand how the cognitive functions relate to your life specifically. You’ll gain fresh insights that will increase your self-knowledge and sense of personal empowerment. 
+        </div>
+        <div class="explanation" id="enneagramExplanation">
+            <h2>Enneagram</h2>
+            <h2>What Is the Enneagram?</h2>
+The Enneagram is a system of typology that classifies human personality into nine basic types.
+
+The word "enneagram" has Greek roots and refers to a nine-pointed symbol consisting of three shapes: an outer circle with a triangle and hexagon inside. As a personality theory, the Enneagram describes the nine primary strategies we all use to relate and react to the world. Each of these personality strategies also has basic fears, basic desires, and generally predictable patterns of behavior.
+
+According to the Enneagram theory, each person develops one of nine predominate personality strategies (or types) by adulthood, which helps them navigate their external environment. The corresponding fears and desires related to each type are examined to understand the underlying motivations behind someone’s behavior.
+
+But this doesn’t mean the Enneagram puts all personalities into one of nine categories. Instead, it claims that personality is interconnected and multidimensional. Over time, every person will show the characteristics of each Enneagram type. Still, the Enneagram test first determines a person’s "core" type, which never changes. It then works to identify the range of behaviors associated with it, providing insight into someone’s personality.
+How Does the Enneagram Work?
+Using the Enneagram is relatively simple, though there are some points to keep in mind. 
+
+In some cases, participants are asked to read over the nine personality types and perform a self-assessment as to which they predominantly belong. In other cases, administrators may opt to use a test, such as the Riso-Hudson Enneagram Type Indicator (RHETI), to determine a person’s core personality type.
+
+<h2>Enneagram wings</h2>
+
+Once you’ve found your place on the Enneagram, the two adjacent strategies next to yours, known as "wings," also influence overall personality. Typically, people are influenced more by one wing than the other, though the traits from both may emerge in different circumstances. The combination of your dominant type (and motivations) and how it relates to your "wings" is what ultimately paints a picture of your personality.
+
+It’s important to reiterate that the purpose of the Enneagram is not to pigeonhole each personality into one type. Thus, taking the Enneagram test doesn’t necessarily label personality but provides tools and insights to help people better understand themselves and each other.
+
+ 
+
+ <h2>Enneagram Types</h2>
+<h3>Here are the nine Enneagram personality types:</h3>
+
+<h3>Enneagram 1</h3>
+
+The perfectionist. Also known as the paragon or reformer, people of this type are generally conscientious, organized, principled, and orderly. They are concerned with morality, the desire to improve themselves, are detail-oriented, and struggle with the voice of their "inner critic." These qualities can often make perfectionists appear critical or judgmental toward themselves and others.
+The perfectionist’s basic fear is being corrupt, and their basic desire is to have integrity and do good.
+
+<h3>Enneagram 2</h3>
+
+The helper. Helpers are empathetic, warm, kind, understanding, and compassionate. They are comforting and optimistic and are easily flattered. Helpers struggle with always giving to others, sometimes forgetting to see that their needs are met.
+
+The helper’s basic fear is being unwanted or unworthy, and their basic desire to be loved. 
+
+<h3>Enneagram 3</h3>
+
+The achiever. Also known as the performer, people with this core personality type regularly feel the pressure to remain busy and productive. Attributes of efficiency, determination, and ambition are fundamental traits of achievers. They're competitive, image-conscious, energetic, charming, and goal-oriented. Achievers also struggle with internal vulnerability.
+
+The achiever’s basic fear is disappointing others, and their basic desire is to be valued and accepted. 
+
+<h3>Enneagram 4</h3>
+
+The individualist. Individualists consider themselves unique and tend to be sensitive, introspective, and reserved. They're emotionally honest, obsessed with authenticity, and tend to be creative, artistic, moody, and self-absorbed. 
+
+The individualist’s basic fear is having no identity or personal significance, and their basic desire is to find meaning in their inner experiences. 
+
+<h3>Enneagram 5</h3>
+
+The investigator. Also known as the observer, investigators are curious, perceptive, and interested in learning. Investigators are analytical, cerebral, private, and contemplative. They tend to isolate themselves, resulting in struggles with social interactions.
+
+The investigator’s basic fear is being useless or helpless, and their basic desire is to be competent and capable.
+
+<h3>Enneagram 6</h3>
+
+The loyalist. Also known as the guardian, loyalists are concerned with safety, planning, and problem-solving. They like clearly-defined roles and are responsible, cautious, and protective, which can lead to feelings of suspicion, paranoia, anxiety, and fear. 
+
+The loyalist’s basic fear is to be without security, and their basic desire to have it. 
+
+<h3>Enneagram 7</h3>
+
+The enthusiast. The enthusiast, or dilettante, is characterized by spontaneity, a sense of adventure, enthusiasm, and excitement. They care about freedom and can often be  "the life of the party." Enthusiasts struggle with commitment and can be compulsive.
+The enthusiast’s basic fear is to be confined or in pain, and their basic desire is to be happy or satisfied. 
+
+<h3>Enneagram 8</h3>
+
+The challenger. The challenger or controller is powerful and assertive, often making effective leaders. They are tough and independent, capable of making hard decisions, and are concerned with justice. Although they regularly come to the aid of others, challengers can also be perceived as overbearing and controlling. 
+
+The challenger’s basic fear is to be controlled by another, and their basic desire is to be in control. 
+
+<h3>Enneagram 9</h3>
+
+The peacemaker. Peacemakers are easygoing, down-to-earth, open-minded, and always looking to avoid conflict. They care about harmony, boundaries, and comfort and are seen as likable and dependent. They sometimes struggle with voicing their opinions, leading to passive-aggressive behavior. 
+
+The peacemaker’s basic fear is to be disconnected and lost, and their basic desire is peace and stability.
+
+<h2>Is the Enneagram Accurate?</h2>
+Due to a lack of research, the Enneagram isn’t used in evidence-based psychology as many professionals prefer the likes of the MBTI, which is based on the theories of renowned psychiatrist Carl Jung.
+
+Still, many consider the Enneagram a personality indicator equal to the rest, with results consistently comparable to other tests. While personality tests like the MBTI may indicate a person’s type, the Enneagram is more concerned with the personality’s defense system and means of coping with external factors. 
+
+A recent surge in the popularity of the Enneagram has also seen its application in therapeutic settings. Studies indicate understanding the Enneagram can help with personal and spiritual growth, ego-development, and enhancing family therapy.
+        </div>
+        <div class="explanation" id="big5Explanation">
+            <h2>What Are the Big 5 Personality Traits?</h2>
+Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
+<hr>
+<div style="width: 100%; display: flex; justify-content: center;">
+<img style="width: 80%; max-width: 400px; margin: 10px;" src="https://www.verywellmind.com/thmb/ydT7-MqpbbnGEOTjfAsUmJawJD4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/2795422-article-the-big-five-personality-dimensions-5a9083fb6edd650036603137.png">
+        </div>
+        It is important to note that each of the five primary personality traits represents a range between two extremes. For example, extraversion represents a continuum between extreme extraversion and extreme introversion. In the real world, most people lie somewhere in between.
+        <h3>Openness</h3>
+        Openness (also referred to as openness to experience) emphasizes imagination and insight the most out of all five personality traits.1 People who are high in openness tend to have a broad range of interests. They are curious about the world and other people and are eager to learn new things and enjoy new experiences.
+        People who are high in this personality trait also tend to be more adventurous and creative. Conversely, people low in this personality trait are often much more traditional and may struggle with abstract thinking.
+        <h3>Conscientiousness</h3>
+        Among each of the personality traits, conscientiousness is one defined by high levels of thoughtfulness, good impulse control, and goal-directed behaviors.1 Highly conscientious people tend to be organized and mindful of details. They plan ahead, think about how their behavior affects others, and are mindful of deadlines.
+        
+        Someone scoring lower in this primary personality trait is less structured and less organized. They may procrastinate to get things done, sometimes missing deadlines completely.
+    
+        <h3>Extraversion</h3>
+Extraversion (or extroversion) is a personality trait characterized by excitability, sociability, talkativeness, assertiveness, and high amounts of emotional expressiveness.1 People high in extraversion are outgoing and tend to gain energy in social situations. Being around others helps them feel energized and excited.
+
+People who are low in this personality trait or introverted tend to be more reserved. They have less energy to expend in social settings and social events can feel draining. Introverts often require a period of solitude and quiet in order to "recharge."
+<h3>Agreeableness</h3>
+This personality trait includes attributes such as trust, altruism, kindness, affection, and other prosocial behaviors.1 People who are high in agreeableness tend to be more cooperative while those low in this personality trait tend to be more competitive and sometimes even manipulative.
+<h3>Neuroticism</h3>
+Neuroticism is a personality trait characterized by sadness, moodiness, and emotional instability.1
+Power RA, Pluess M. Heritability estimates of the Big Five personality traits based on common genetic variants. Translation Psychiatry. 2015;5:e604. doi:10.1038/tp.2015.96
+
+ Individuals who are high in neuroticism tend to experience mood swings, anxiety, irritability, and sadness. Those low in this personality trait tend to be more stable and emotionally resilient.
+
+
+<h3>Universality of Primary Personality Traits</h3>
+McCrae and his colleagues found that the Big 5 personality traits are remarkably universal. One study that looked at people from more than 50 different cultures found that the five dimensions could be accurately used to describe personality.
+
+Based on this research, many psychologists now believe that the five personality dimensions are not only universal but that they also have biological origins. Psychologist David Buss has proposed an evolutionary explanation for these five core personality traits, suggesting that they represent the most important qualities that shape our social landscape.
+
+<h3>Factors Influencing Personality Traits</h3>
+Research suggests that both biological and environmental influences play a role in shaping our personalities. Twin studies suggest that both nature and nurture play a role in the development of each of the five personality traits.2
+
+One study of the genetic and environmental underpinnings of the five traits looked at 123 pairs of identical twins and 127 pairs of fraternal twins. The findings suggested that the heritability of each personality trait was 53% for extraversion, 41% for agreeableness, 44% for conscientiousness, 41% for neuroticism, and 61% for openness. 
+
+Longitudinal studies also suggest that these big five personality traits tend to be relatively stable over the course of adulthood. One four-year study of working-age adults found that personality changed little as a result of adverse life events.
+
+Studies show that maturation may have an impact on the five personality traits. As people age, they tend to become less extraverted, less neurotic, and less open to an experience. Agreeableness and conscientiousness, on the other hand, tend to increase as people grow older.
+</div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="./index.js"></script>
